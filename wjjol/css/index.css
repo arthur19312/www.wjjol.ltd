@@ -15,6 +15,13 @@ a{
     text-decoration: none;
     -moz-user-select: none;
 }
+.opapic {
+    -webkit-filter: opacity(80%);
+    -webkit-filter:brightness(150%);
+    filter: opacity(80%);
+    filter：brightness(150%);
+}
+
 .wjjtitle{
     font-family: 华文彩云;
     font-size: 241px;

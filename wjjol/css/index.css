@@ -1,0 +1,295 @@
+
+
+.body{
+    background-size: 100%;
+    line-height: 1;
+    margin: 0px;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+    -moz-user-select: none;
+}
+.wjjtitle{
+    font-family: 华文彩云;
+    font-size: 241px;
+    padding-top: 2%;
+    margin-left: 4%;
+    line-height: 1.13;
+}
+
+.heart{
+    color: #ff0084;
+    position: absolute;
+    z-index: -1;
+    font-size: 500px;
+    margin: -210px 0 0 70px;
+    line-height: 900px;
+
+}
+.action{
+    font-size: 150px;
+    margin-top:0;
+    margin-left: 10px;
+    font-family:华文琥珀;
+    color: #ff0084;
+    padding-top: 90px;
+    transition: width 1s ease-in-out 1s, height 1s ease-in-out 1s;
+
+}
+.action:hover{
+    animation-name: textavi;
+    animation-duration: 0.4s;
+    animation-delay: 0.01s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes textavi {
+    29% {
+        transform: scale(1,1);
+    }
+    30% {
+        transform: scale(1.1,1.05);
+    }
+    70% {
+        transform: scale(1.1,1.05);
+    }
+    71% {
+        transform: scale(1,1);
+    }
+}
+@keyframes textavi {
+    29% {
+        transform: scale(1,1);
+    }
+    30% {
+        transform: scale(1.1,1.05);
+    }
+    70% {
+        transform: scale(1.1,1.05);
+    }
+    71% {
+        transform: scale(1,1);
+    }
+}
+.githublink{
+    font-size: 95px;
+    text-align: center;
+    margin-top: 0;
+    font-family: Broadway;
+    color: white;
+    margin-left: 0px;
+    font-size: 85px;
+    margin-top: 60px;
+    line-height: 130px;
+}
+
+.githublink:hover{
+    animation-name: linkani;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.githublink:hover >.hearttext{
+    display: none;
+}
+@-webkit-keyframes linkani {
+    0% {
+    }
+    40% {
+        transform: scale(1.35,1.3);
+    }
+    50% {
+        transform: scale(1.35,1.3);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@keyframes linkani {
+    0% {
+    }
+    40% {
+        transform: scale(1.35,1.3);
+    }
+    50% {
+        transform: scale(1.35,1.3);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+
+.gitline1{
+    font-size: 23px;
+    margin-top:17px;
+    font-family:Castellar;
+    color: white;
+    line-height: 48px;"
+}
+.gitline2{
+    font-size: 23px;
+    margin-top:40px;
+    font-family:Castellar;
+    color: white;
+    line-height: 48px;
+}
+
+
+.blogline{
+    margin-top: 5px;
+    height: 388px;
+}
+.blogtitle{
+    font-size: 55px;
+    margin-top: 16px;
+    font-family: "华文琥珀";
+}
+.blogblock{
+    text-align: center;
+    line-height: 5em;
+    width: 333px;
+    height: 342px;
+    float: left;
+    margin-left: 27px;
+    border: 8px black solid;
+    border-radius: 30px;
+}
+.blogblock:hover >p {
+    color: white;
+    display: none;
+}
+.allo1:hover{
+    background: #ff606b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd170, #ff606b, #bd29fb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd170, #ff606b, #bd29fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.allo2:hover{
+    background: #bd29fb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff606b, #bd29fb, #43a4ec);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff606b, #bd29fb, #43a4ec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.allo3:hover{
+    background: #43a4ec;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bd29fb, #43a4ec, #01fbd0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bd29fb, #43a4ec, #01fbd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.allo4:hover{
+    background: #01fbd0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #43a4ec, #01fbd0, #ffd170);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #43a4ec, #01fbd0, #ffd170); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.allo5:hover{
+    background: #ffd170;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #01fbd0, #ffd170, #ff606b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #01fbd0, #ffd170, #ff606b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.hubblock{
+    text-align: center;
+    line-height: 5em;
+    width: 400px;
+    height: 125px;
+    margin: 75px 0 0 20px;
+    border: 8px white solid;
+    border-radius: 10px;
+}
+.hubblock:hover{
+    border-color: #ff0084;
+
+}
+.hubblock:hover >p{
+    color: #ff0084;
+}
+.alloport{
+    animation-name: alloani;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    background: orange;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,  #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@-webkit-keyframes alloani {
+    0% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right,  #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+        background: linear-gradient(to right, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+    }
+    20% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb);
+        background: linear-gradient(to right, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb);
+    }
+    40% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b,  #bd29fb, #43a4ec);
+        background: linear-gradient(to right, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb, #43a4ec);
+    }
+    60% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #43a4ec, #01fbd0, #ffd170, #ff606b,  #bd29fb, #43a4ec, #01fbd0);
+        background: linear-gradient(to right, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0);
+    }
+    80% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #01fbd0, #ffd170, #ff606b,  #bd29fb, #43a4ec, #01fbd0, #ffd170);
+        background: linear-gradient(to right, #01fbd0, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170);
+    }
+    100% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right,  #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+        background: linear-gradient(to right, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+    }
+}
+
+@keyframes alloani {
+    0% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right,  #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+        background: linear-gradient(to right, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+    }
+    20% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb);
+        background: linear-gradient(to right, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb);
+    }
+    40% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b,  #bd29fb, #43a4ec);
+        background: linear-gradient(to right, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb, #43a4ec);
+    }
+    60% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #43a4ec, #01fbd0, #ffd170, #ff606b,  #bd29fb, #43a4ec, #01fbd0);
+        background: linear-gradient(to right, #43a4ec, #01fbd0, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0);
+    }
+    80% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #01fbd0, #ffd170, #ff606b,  #bd29fb, #43a4ec, #01fbd0, #ffd170);
+        background: linear-gradient(to right, #01fbd0, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170);
+    }
+    100% {
+        background: orange;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right,  #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+        background: linear-gradient(to right, #ffd170, #ff606b, #bd29fb, #43a4ec, #01fbd0, #ffd170, #ff606b);
+    }
+}
+
+.workblock1{
+    text-align: center;
+    width: 106px;
+    height: 106px;
+    float: left;
+    margin: 0px 0 0px 10px;
+    border: 8px black double;
+    border-radius: 12px;
+}
+

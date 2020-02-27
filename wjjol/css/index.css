@@ -24,9 +24,9 @@ a{
 
 .wjjtitle{
     font-family: 华文彩云;
-    font-size: 241px;
-    padding-top: 2%;
-    margin-left: 4%;
+    font-size: 12rem;
+    padding-top: 2rem;
+    margin-left: 5rem;
     line-height: 1.13;
 }
 
@@ -34,18 +34,17 @@ a{
     color: #ff0084;
     position: absolute;
     z-index: -1;
-    font-size: 500px;
-    margin: -210px 0 0 70px;
-    line-height: 900px;
+    font-size: 31rem;
+    margin: -13rem 0 0 4.3rem;
+    line-height: 56rem;
 
 }
 .action{
-    font-size: 150px;
-    margin-top:0;
-    margin-left: 10px;
+    font-size: 9.3rem;
+    margin-left: 0.6rem;
     font-family:华文琥珀;
     color: #ff0084;
-    padding-top: 90px;
+    padding-top: 5.6rem;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out 1s;
 
 }
@@ -84,15 +83,15 @@ a{
     }
 }
 .githublink{
-    font-size: 95px;
+    font-size: 5.9rem;
     text-align: center;
     margin-top: 0;
     font-family: Broadway;
     color: white;
     margin-left: 0px;
-    font-size: 85px;
-    margin-top: 60px;
-    line-height: 130px;
+    font-size: 5.3rem;
+    margin-top: 3.7rem;
+    line-height: 8.1rem;
 }
 
 .githublink:hover{
@@ -133,39 +132,39 @@ a{
 
 
 .gitline1{
-    font-size: 23px;
-    margin-top:17px;
+    font-size: 1.4rem;
+    margin-top:1rem;
     font-family:Castellar;
     color: white;
-    line-height: 48px;"
+    line-height: 3rem;"
 }
 .gitline2{
-    font-size: 23px;
-    margin-top:40px;
+    font-size: 1.4rem;
+    margin-top:2.5rem;
     font-family:Castellar;
     color: white;
-    line-height: 48px;
+    line-height: 3rem;
 }
 
 
 .blogline{
-    margin-top: 5px;
-    height: 388px;
+    margin-top: 0.3rem;
+    height: 24rem;
 }
 .blogtitle{
-    font-size: 55px;
-    margin-top: 16px;
+    font-size: 3.4rem;
+    margin-top: 1rem;
     font-family: "华文琥珀";
 }
 .blogblock{
     text-align: center;
     line-height: 5em;
-    width: 333px;
-    height: 342px;
+    width: 20.5rem;
+    height: 21.4rem;
     float: left;
-    margin-left: 27px;
-    border: 8px black solid;
-    border-radius: 30px;
+    margin-left: 1.6rem;
+    border: 0.5rem black solid;
+    border-radius: 1.8rem;
 }
 .blogblock:hover >p {
     color: white;
@@ -201,11 +200,11 @@ a{
 .hubblock{
     text-align: center;
     line-height: 5em;
-    width: 400px;
-    height: 125px;
-    margin: 75px 0 0 20px;
-    border: 8px white solid;
-    border-radius: 10px;
+    width: 25rem;
+    height: 7.8rem;
+    margin: 4.7rem 0 0 1.2rem;
+    border: 0.5rem white solid;
+    border-radius: 0.6rem;
 }
 .hubblock:hover{
     border-color: #ff0084;
@@ -292,11 +291,11 @@ a{
 
 .workblock1{
     text-align: center;
-    width: 106px;
-    height: 106px;
+    width: 6.6rem;
+    height: 6.6rem;
     float: left;
-    margin: 0px 0 0px 10px;
-    border: 8px black double;
-    border-radius: 12px;
+    margin-left: 0.6rem;
+    border: 0.5rem black double;
+    border-radius: 0.8rem;
 }
 

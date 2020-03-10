@@ -18,16 +18,17 @@ a{
 .opapic {
     -webkit-filter: opacity(80%);
     -webkit-filter:brightness(150%);
-    filter: opacity(80%);
+    filter: opacity(90%);
     filter：brightness(150%);
 }
 
 .wjjtitle{
     font-family: 华文彩云;
-    font-size: 12rem;
+    font-size: 11rem;
     padding-top: 2rem;
-    margin-left: 5rem;
-    line-height: 1.13;
+    margin-left: 6rem;
+    line-height: 1.12;
+    letter-spacing: 1.5rem;
 }
 
 .heart{
@@ -150,19 +151,34 @@ a{
 .blogline{
     margin-top: 0.3rem;
     height: 24rem;
+    width: 98%;
+    margin-left: 2%;
+    font-family:华文琥珀
 }
 .blogtitle{
-    font-size: 3.4rem;
-    margin-top: 1rem;
-    font-family: "华文琥珀";
+    font-size: 2.8rem;
+    margin-top: 1.5rem;
 }
+.blogtitle2{
+    font-size: 2.3rem;margin-top:-38px;;
+}
+.blogtitle3{
+    font-size: 1.8rem;margin-top:-33px;
+}
+.blogtitle4{
+    font-size: 1rem;margin-top:-42px;margin-bottom:-80px;
+}
+.blogtitle5{
+    font-size: 1.3rem;margin-top:1rem;margin-bottom:-80px;line-height: 4rem;
+}
+
 .blogblock{
     text-align: center;
-    line-height: 5em;
-    width: 20.5rem;
-    height: 21.4rem;
+    line-height: 4rem;
+    width: 19rem;
+    height: 18rem;
     float: left;
-    margin-left: 1.6rem;
+    margin-left: 2%;
     border: 0.5rem black solid;
     border-radius: 1.8rem;
 }

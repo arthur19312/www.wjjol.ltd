@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>焦点图</title>
+</head>
+
+<body>
+    <dl id="menu" style="position: relative;">
+        <dt style="position: absolute;">
+            <a href="#img1">1</a>
+            <a href="#img2">2</a>
+            <a href="#img3">3</a>
+            <a href="#img4">4</a>
+        </dt>
+        <dd style="overflow: hidden;height: 600px;">
+            <img src="../static/img/oooo.png" id="img1" />
+            <img src="../static/img/jgqw.png" id="img2" />
+            <img src="../static/img/oooo.png" id="img3" />
+            <img src="../static/img/jgqw.png" id="img4" />
+        </dd>
+    </dl>
+</body>
+
+<script>
+    
+/*
+autodivheight();
+function autodivheight(){ //函数：获取尺寸
+//获取浏览器窗口高度
+var winHeight=0;
+if (window.innerHeight){
+winHeight = window.innerHeight;
+}else if ((document.body) && (document.body.clientHeight)){
+winHeight = document.body.clientHeight;
+}
+
+//通过深入Document内部对body进行检测，获取浏览器窗口高度
+if (document.documentElement && document.documentElement.clientHeight){
+winHeight = document.documentElement.clientHeight;
+}
+//DIV高度为浏览器窗口的高度
+//document.getElementById("test").style.height= winHeight +"px";
+//DIV高度为浏览器窗口高度的一半
+document.getElementsByClassName("content").style.height= winHeight/2 +"px";
+}
+
+
+window.οnresize=autodivheight; //浏览器窗口发生变化时同时变化DIV高度
+
+*/
+</script>
+
+<style>
+   /* *{
+    margin:0;
+    padding:0;
+    }
+    #menu{
+        position: relative;
+        width: 730px;
+        height :454px ;
+        margin:6px auto;
+    }
+    #menu dt{
+        position: absolute ;
+        right:5px;
+        bottom:5px;
+    }
+    #menu dt a {
+        float: left;
+        display: block;
+        font-size: 12px;
+        text-decoration: none;
+        color: #309;
+        background: #999;
+        border: 1px solid #cCC;
+        margin-left: 2px;
+        padding: 1px 4px;
+    }
+    #menu dt a:hover {
+        background: #fff;
+        color: #f00;
+    }
+
+    #menu dd{
+        width: 730px;
+        height:454px;
+        overflow: hidden;
+    }
+*/
+
+</style>
+
+</html>

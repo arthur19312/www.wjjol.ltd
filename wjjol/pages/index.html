@@ -5,37 +5,131 @@
     <title>王津津のCYBERSPACE</title>
 </head>
 <body>
-<div style="height: 10000px">
-    <div class="title-bg"></div>
-    <div class="title-context">
+<div>
+    <div class="title">
+        <div class="title-item">
+            <a href="#home" onclick="activate(this)">
+                <span>HOME</span>
+            </a>
+        </div>
+        <div class="title-item" >
+            <a href="#potfolio" onclick="activate(this)">
+                POTFOLIO
+            </a>
+        </div>
+        <div class="title-item" >
+            <a href="#blog" onclick="activate(this)">
+                BLOG
+            </a>
+        </div>
+        <div class="title-item">
+            <a href="#github" onclick="activate(this)">
+                GITHUB
+            </a>
+        </div>
+        <div class="title-item">
+                <a href="#tool" onclick="activate(this)">
+                    TOOL
+                </a>
+        </div>
+        <div class="title-item">
+            <a href="#contact" onclick="activate(this)">
+                CONTACT
+            </a>
+        </div>
+
 
     </div>
-
-
-
-
+    <div class="container">
+        <div class="content">
+            <div id="home" class="content-item-active" >
+                home
+            </div>
+            <div id="potfolio" class="content-item" >
+                potfolio
+            </div>
+            <div id="blog" class="content-item">
+                blog
+            </div>
+            <div id="github" class="content-item">
+                github
+            </div>
+            <div id="tool" class="content-item">
+                tool
+            </div>
+            <div id="contact" class="content-item">
+                contact
+            </div>
+        </div>
+        
+    </div>
 </div>
 </body>
+<script>
+function activate(element){
+    var s=element.href.split('#')
+    var x = document.getElementById(s[s.length-1])
+    var p=x.parentNode.children
+    var n=p.length
+    for(var i=0;i<n;i++){
+        p[i].className="content-item"
+    }
+    x.className="content-item-active"
+}
+
+
+</script>
+
+
+
+
 
 <style>
-    body{
+    body {
         margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
     }
-    .title-bg {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
+    
+
+    .title {
+        position: fixed;
+        left: 2rem;
+        top:2rem;
+        z-index: 5;
 
     }
-    .title-context{
-        font-size: 6rem;
-        color: white;
-        font-family: 华文琥珀;
+    .title-item{
+        margin-top: 3rem;
     }
+    .title-item a{
+        color: gray;
+        padding: 2rem 0;
+        outline: none;
+    }
+    .title-item a:hover{
+        color: black;
+    }
+
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .content{
+        padding: 2rem 6% 0 10rem;
+        text-align: left;
+    }
+
+    .content-item{
+        display: none;
+    }
+
+    
+
 </style>
 
 </html>

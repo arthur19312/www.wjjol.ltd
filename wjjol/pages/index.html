@@ -4,41 +4,48 @@
     <meta charset="UTF-8">
     <title>王津津のCYBERSPACE</title>
 </head>
+<link rel="stylesheet" href="../static/font/iconfont.css">
+
 <body>
 <div>
     <div class="title">
         <div class="title-item">
-            <a href="#home" onclick="activate(this)">
+            <a id="_home" onclick="activate(this)">
+				<span class="iconfont icon-home"></span>
                 <span>HOME</span>
             </a>
         </div>
         <div class="title-item" >
-            <a href="#potfolio" onclick="activate(this)">
+            <a id="_potfolio" onclick="activate(this)">
+				<span class="iconfont icon-potfolio"></span>
                 POTFOLIO
             </a>
         </div>
         <div class="title-item" >
-            <a href="#blog" onclick="activate(this)">
+			
+            <a id="_blog" onclick="activate(this)">
+				<span class="iconfont icon-blog"></span>
                 BLOG
             </a>
         </div>
         <div class="title-item">
-            <a href="#github" onclick="activate(this)">
+            <a id="_github" onclick="activate(this)">
+				<span class="iconfont icon-github"></span>
                 GITHUB
             </a>
         </div>
         <div class="title-item">
-                <a href="#tool" onclick="activate(this)">
-                    TOOL
-                </a>
+            <a id="_tool" onclick="activate(this)">
+				<span class="iconfont icon-tool"></span>
+                TOOL
+            </a>
         </div>
         <div class="title-item">
-            <a href="#contact" onclick="activate(this)">
+            <a id="_contact" onclick="activate(this)">
+				<span class="iconfont icon-contact"></span>
                 CONTACT
             </a>
         </div>
-
-
     </div>
     <div class="container">
         <div class="content">
@@ -67,8 +74,8 @@
 </body>
 <script>
 function activate(element){
-    var s=element.href.split('#')
-    var x = document.getElementById(s[s.length-1])
+    var s=element.id.slice(1)
+    var x = document.getElementById(s)
     var p=x.parentNode.children
     var n=p.length
     for(var i=0;i<n;i++){
@@ -90,6 +97,13 @@ function activate(element){
         padding: 0;
         -webkit-tap-highlight-color: transparent;
     }
+	
+	.iconfont{
+		font-size: 2rem;
+		margin-right: 0.8rem;
+		position: relative;
+		top: 0.35rem;
+	}
     
 
     .title {
@@ -106,6 +120,7 @@ function activate(element){
         color: gray;
         padding: 2rem 0;
         outline: none;
+		cursor: pointer;
     }
     .title-item a:hover{
         color: black;

@@ -61,11 +61,13 @@
 							</div>
 						</a>
 						<div id="home" class="content-item-active home">
-							<img id="1_pic" src="../static/img/home/lazy.png" class="home-img">
-							<img id="2_pic" src="../static/img/home/git.png" class="home-img">
-							<img id="3_pic" src="../static/img/home/banner.png" class="home-img">
-							<img id="4_pic" src="../static/img/home/interact.png" class="home-img">
-							<img id="5_pic" src="../static/img/home/light.png" class="home-img">
+							<img id="1_pic" src="../static/img/home/1.jpg" class="home-img">
+							<img id="2_pic" src="../static/img/home/2.jpg" class="home-img">
+							<img id="3_pic" src="../static/img/home/3.jpg" class="home-img">
+							<img id="4_pic" src="../static/img/home/4.jpg" class="home-img">
+							<img id="5_pic" src="../static/img/home/5.jpg" class="home-img">
+							<img id="6_pic" src="../static/img/home/6.jpg" class="home-img">
+							<img id="7_pic" src="../static/img/home/7.jpg" class="home-img">
 						</div>
 					</div>
 					
@@ -113,7 +115,7 @@
 				winHeight = document.documentElement.clientHeight;
 			} */
 			//DIV高度为浏览器窗口的高度
-			var h=winHeight+ "px";
+			var h=winHeight*10/9+ "px";
 			document.getElementById("home").style.height = h;
 			document.getElementById("slider").style.height = h;
 		}
@@ -143,7 +145,7 @@
 			document.getElementById(s).style.zIndex=-1
 			if(flag>0){
 				nowActive++;
-				if(nowActive == 6){
+				if(nowActive == 8){
 					nowActive=1
 				}
 				s=nowActive+"_pic"

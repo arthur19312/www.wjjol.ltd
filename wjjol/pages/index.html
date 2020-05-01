@@ -49,9 +49,27 @@
 			</div>
 			<div class="container">
 				<div class="content">
-					<div id="home" class="content-item-active">
-						<img src="../static/img/home/lazy.png" class="home-img">
+					<div style="position: relative;" id="slider">
+						<a href="#" onclick="slide(-1)">
+							<div class="left-slider slider">
+								
+							</div>
+						</a>
+						<a href="#" onclick="slide(1)">
+							<div class="right-slider slider">
+								
+							</div>
+						</a>
+						<div id="home" class="content-item-active home">
+							<img id="1_pic" src="../static/img/home/lazy.png" class="home-img">
+							<img id="2_pic" src="../static/img/home/git.png" class="home-img">
+							<img id="3_pic" src="../static/img/home/banner.png" class="home-img">
+							<img id="4_pic" src="../static/img/home/interact.png" class="home-img">
+							<img id="5_pic" src="../static/img/home/light.png" class="home-img">
+						</div>
 					</div>
+					
+						
 					<div id="potfolio" class="content-item">
 						potfolio
 					</div>
@@ -73,10 +91,33 @@
 		</div>
 	</body>
 	<script>
-		window.onload=function(){
-			document.getElementById("_home").style.color="black"
+		var nowActive =1
+		window.onload = function() {
+			document.getElementById("_home").style.color = "black"
+			autodivheight();
 		}
-		
+
+		window.οnresize = autodivheight; //浏览器窗口发生变化时同时变化DIV高度
+
+		function autodivheight() { //函数：获取尺寸
+			//获取浏览器窗口高度
+			var winHeight = 0;
+			if (window.innerHeight) {
+				winHeight = window.innerHeight;
+			} else if ((document.body) && (document.body.clientHeight)) {
+				winHeight = document.body.clientHeight;
+			}
+/* 
+			//通过深入Document内部对body进行检测，获取浏览器窗口高度
+			if (document.documentElement && document.documentElement.clientHeight) {
+				winHeight = document.documentElement.clientHeight;
+			} */
+			//DIV高度为浏览器窗口的高度
+			var h=winHeight+ "px";
+			document.getElementById("home").style.height = h;
+			document.getElementById("slider").style.height = h;
+		}
+
 		function activate(element) {
 
 			var a = document.getElementsByClassName("title-item")
@@ -95,6 +136,29 @@
 			}
 			x.className = "content-item-active"
 		}
+		
+		
+		function slide(flag){
+			var s=nowActive+"_pic"
+			document.getElementById(s).style.zIndex=-1
+			if(flag>0){
+				nowActive++;
+				if(nowActive == 6){
+					nowActive=1
+				}
+				s=nowActive+"_pic"
+				document.getElementById(s).style.zIndex=2
+			}else {
+				nowActive--;
+				if(nowActive == 0){
+					nowActive=5
+				}
+				s=nowActive+"_pic"
+				document.getElementById(s).style.zIndex=2
+			}
+		}
+		
+		
 	</script>
 
 
@@ -105,7 +169,11 @@
 		body {
 			margin: 0;
 			padding: 0;
+			
+			min-height: 37.5rem;
+			
 			-webkit-tap-highlight-color: transparent;
+			
 		}
 
 		.iconfont {
@@ -144,21 +212,50 @@
 			width: 90%;
 			margin: 0 auto;
 			text-align: center;
-
+			margin-top: 3rem;
 		}
 
 		.content {
-			padding: 2rem 6% 0 15rem;
+			padding: 2rem 6% 0 10%;
 			text-align: left;
+			position: relative;
+		}
+
+		.home {
+			position: relative;
+			overflow: hidden; 
+		}
+		
+		.slider {
+			position: absolute; 
+			z-index: 3;
+			opacity: 0;
+			height: 100%;
+			display: block;
+		}
+		.slider:hover{
+			opacity: 1;
+		}
+		.left-slider{
+			left: 0;
+			width: 45%;
+			background: rgba(255,255,255,0.15); 
+		}
+		.right-slider{
+			right: 10%;
+			width: 45%;
+			background: rgba(255,255,255,0.15);
 		}
 
 		.content-item {
 			display: none;
 		}
-		
-		.home-img{
+
+		.home-img {
+			position: absolute;
 			width: 90%;
-			height: 90%;
+			
+			z-index: 1;
 		}
 	</style>
 

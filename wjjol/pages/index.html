@@ -1,150 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>王津津のCYBERSPACE</title>
-</head>
-<link rel="stylesheet" href="../static/font/iconfont.css">
+	<head>
+		<meta charset="UTF-8">
+		<title>王津津のCYBERSPACE</title>
+	</head>
+	<link rel="stylesheet" href="../static/font/iconfont.css">
 
-<body>
-<div>
-    <div class="title">
-        <div class="title-item">
-            <a id="_home" onclick="activate(this)">
-				<span class="iconfont icon-home"></span>
-                <span>HOME</span>
-            </a>
-        </div>
-        <div class="title-item" >
-            <a id="_potfolio" onclick="activate(this)">
-				<span class="iconfont icon-potfolio"></span>
-                POTFOLIO
-            </a>
-        </div>
-        <div class="title-item" >
-			
-            <a id="_blog" onclick="activate(this)">
-				<span class="iconfont icon-blog"></span>
-                BLOG
-            </a>
-        </div>
-        <div class="title-item">
-            <a id="_github" onclick="activate(this)">
-				<span class="iconfont icon-github"></span>
-                GITHUB
-            </a>
-        </div>
-        <div class="title-item">
-            <a id="_tool" onclick="activate(this)">
-				<span class="iconfont icon-tool"></span>
-                TOOL
-            </a>
-        </div>
-        <div class="title-item">
-            <a id="_contact" onclick="activate(this)">
-				<span class="iconfont icon-contact"></span>
-                CONTACT
-            </a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="content">
-            <div id="home" class="content-item-active" >
-                home
-            </div>
-            <div id="potfolio" class="content-item" >
-                potfolio
-            </div>
-            <div id="blog" class="content-item">
-                blog
-            </div>
-            <div id="github" class="content-item">
-                github
-            </div>
-            <div id="tool" class="content-item">
-                tool
-            </div>
-            <div id="contact" class="content-item">
-                contact
-            </div>
-        </div>
-        
-    </div>
-</div>
-</body>
-<script>
-function activate(element){
-    var s=element.id.slice(1)
-    var x = document.getElementById(s)
-    var p=x.parentNode.children
-    var n=p.length
-    for(var i=0;i<n;i++){
-        p[i].className="content-item"
-    }
-    x.className="content-item-active"
-}
+	<body>
+		<div>
+			<div class="title">
+				<div class="title-item">
+					<a id="_home" onclick="activate(this)">
+						<span class="iconfont icon-home"></span>
+						<span>HOME</span>
+					</a>
+				</div>
+				<div class="title-item">
+					<a id="_potfolio" onclick="activate(this)">
+						<span class="iconfont icon-potfolio"></span>
+						POTFOLIO
+					</a>
+				</div>
+				<div class="title-item">
 
+					<a id="_blog" onclick="activate(this)">
+						<span class="iconfont icon-blog"></span>
+						BLOG
+					</a>
+				</div>
+				<div class="title-item">
+					<a id="_github" onclick="activate(this)">
+						<span class="iconfont icon-github"></span>
+						GITHUB
+					</a>
+				</div>
+				<div class="title-item">
+					<a id="_tool" onclick="activate(this)">
+						<span class="iconfont icon-tool"></span>
+						TOOL
+					</a>
+				</div>
+				<div class="title-item">
+					<a id="_contact" onclick="activate(this)">
+						<span class="iconfont icon-contact"></span>
+						CONTACT
+					</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="content">
+					<div id="home" class="content-item-active">
+						home
+					</div>
+					<div id="potfolio" class="content-item">
+						potfolio
+					</div>
+					<div id="blog" class="content-item">
+						blog
+					</div>
+					<div id="github" class="content-item">
+						github
+					</div>
+					<div id="tool" class="content-item">
+						tool
+					</div>
+					<div id="contact" class="content-item">
+						contact
+					</div>
+				</div>
 
-</script>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload=function(){
+			document.getElementById("_home").style.color="black"
+		}
+		
+		function activate(element) {
 
+			var a = document.getElementsByClassName("title-item")
+			var b = a.length
+			for (var i = 0; i < b; i++) {
+				// 换行也是节点 如果压缩 索引应当为1
+				a[i].querySelector("a").style.color = "#aaa"
+			}
+			element.style.color = "black"
 
-
-
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        -webkit-tap-highlight-color: transparent;
-    }
-	
-	.iconfont{
-		font-size: 2rem;
-		margin-right: 0.8rem;
-		position: relative;
-		top: 0.35rem;
-	}
-    
-
-    .title {
-        position: fixed;
-        left: 2rem;
-        top:2rem;
-        z-index: 5;
-
-    }
-    .title-item{
-        margin-top: 3rem;
-    }
-    .title-item a{
-        color: gray;
-        padding: 2rem 0;
-        outline: none;
-		cursor: pointer;
-    }
-    .title-item a:hover{
-        color: black;
-    }
+			var s = element.id.slice(1)
+			var x = document.getElementById(s)
+			var p = x.parentNode.children
+			var n = p.length
+			for (var i = 0; i < n; i++) {
+				p[i].className = "content-item"
+			}
+			x.className = "content-item-active"
+		}
+	</script>
 
 
-    .container{
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
 
-    }
 
-    .content{
-        padding: 2rem 6% 0 10rem;
-        text-align: left;
-    }
 
-    .content-item{
-        display: none;
-    }
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			-webkit-tap-highlight-color: transparent;
+		}
 
-    
+		.iconfont {
+			font-size: 2rem;
+			margin-right: 0.8rem;
+			position: relative;
+			top: 0.35rem;
+		}
 
-</style>
+
+		.title {
+			position: fixed;
+			left: 2rem;
+			top: 2rem;
+			z-index: 5;
+
+		}
+
+		.title-item {
+			margin-top: 3rem;
+		}
+
+		.title-item a {
+			color: #aaa;
+			padding: 2rem 0;
+			outline: none;
+			cursor: pointer;
+		}
+
+		.title-item a:hover {
+			color: black;
+		}
+
+
+		.container {
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+
+		}
+
+		.content {
+			padding: 2rem 6% 0 10rem;
+			text-align: left;
+		}
+
+		.content-item {
+			display: none;
+		}
+	</style>
 
 </html>

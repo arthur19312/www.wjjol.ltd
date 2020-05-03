@@ -107,7 +107,7 @@
 			document.getElementById("_home").style.color = "black"
 			autodivheight();
 			var s=nowActive+"_pic"
-			document.getElementById(s).style.display="block"
+			document.getElementById(s).className="img-cur"
 			
 		}
 
@@ -156,12 +156,14 @@
 			var s=nowActive+"_pic"
 			var ele = document.getElementById(s)
 			
-			ele.style.opacity="0.8"
+			/* ele.style.opacity="0.8"
 			
 			setTimeout(function(){
 				ele.style.display="none"
 			},100);
+			 */
 			
+			ele.className="home-img"
 			
 			
 			
@@ -172,12 +174,16 @@
 				}
 				s=nowActive+"_pic"
 				var elee = document.getElementById(s)
-				elee.style.display="block"
+				
+				elee.className="img-cur"
+				
+				
+				/* elee.style.display="block"
 				setTimeout(function(){
 					
 					
 					elee.style.opacity=1
-				},100);
+				},100); */
 				
 			}else {
 				nowActive--;

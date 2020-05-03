@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	min-height: 37.5rem;
+
+	-webkit-tap-highlight-color: transparent;
+
+}
+
+.iconfont {
+	font-size: 2rem;
+	margin-right: 0.8rem;
+	position: relative;
+	top: 0.35rem;
+}
+
+
+.title {
+	position: fixed;
+	left: 2rem;
+	top: 2rem;
+	z-index: 5;
+
+}
+
+.title-item {
+	margin-top: 3rem;
+}
+
+.title-item a {
+	color: #aaa;
+	padding: 2rem 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.title-item a:hover {
+	color: black;
+}
+
+
+.container {
+	width: 96%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.content {
+	padding: 2rem 4% 0 12%;
+	text-align: left;
+	position: relative;
+}
+
+.home {
+	overflow: hidden;
+}
+
+.slider {
+	position: absolute;
+	z-index: 3;
+	opacity: 0;
+	height: 100%;
+	display: block;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.left-slider {
+	left: 0;
+	width: 45%;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.right-slider {
+	right: 10%;
+	width: 45%;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.content-item {
+	display: none;
+}
+
+.content-item-active{
+	display: block;
+}
+
+.home-img {
+	width: 90%;
+	z-index: 1;
+	display: none;
+	 -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}

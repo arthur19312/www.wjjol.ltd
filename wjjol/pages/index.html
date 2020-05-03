@@ -5,7 +5,7 @@
 		<title>王津津のCYBERSPACE</title>
 	</head>
 	<link rel="stylesheet" href="../static/font/iconfont.css">
-
+	<link rel="stylesheet" href="../css/index.css">
 	<body>
 		<div>
 			<div class="title">
@@ -41,6 +41,12 @@
 					</a>
 				</div>
 				<div class="title-item">
+					<a id="_diary" onclick="activate(this)">
+						<span class="iconfont icon-diary"></span>
+						DIARY
+					</a>
+				</div>
+				<div class="title-item">
 					<a id="_contact" onclick="activate(this)">
 						<span class="iconfont icon-contact"></span>
 						CONTACT
@@ -49,7 +55,7 @@
 			</div>
 			<div class="container">
 				<div class="content">
-					<div style="position: relative;" id="slider">
+					<div style="position: relative;" id="home" class="content-item-active">
 						<a href="#" onclick="slide(-1)">
 							<div class="left-slider slider">
 								
@@ -60,7 +66,7 @@
 								
 							</div>
 						</a>
-						<div id="home" class="content-item-active home">
+						<div class="home">
 							<img id="1_pic" src="../static/img/home/1.jpg" class="home-img">
 							<img id="2_pic" src="../static/img/home/2.jpg" class="home-img">
 							<img id="3_pic" src="../static/img/home/3.jpg" class="home-img">
@@ -84,6 +90,9 @@
 					<div id="tool" class="content-item">
 						tool
 					</div>
+					<div id="diary" class="content-item">
+						diary
+					</div>
 					<div id="contact" class="content-item">
 						contact
 					</div>
@@ -97,6 +106,9 @@
 		window.onload = function() {
 			document.getElementById("_home").style.color = "black"
 			autodivheight();
+			var s=nowActive+"_pic"
+			document.getElementById(s).style.display="block"
+			
 		}
 
 		window.οnresize = autodivheight; //浏览器窗口发生变化时同时变化DIV高度
@@ -115,9 +127,9 @@
 				winHeight = document.documentElement.clientHeight;
 			} */
 			//DIV高度为浏览器窗口的高度
-			var h=winHeight*10/9+ "px";
+			var h=winHeight*6/5+ "px";
 			document.getElementById("home").style.height = h;
-			document.getElementById("slider").style.height = h;
+			//document.getElementById("slider").style.height = h;
 		}
 
 		function activate(element) {
@@ -142,21 +154,21 @@
 		
 		function slide(flag){
 			var s=nowActive+"_pic"
-			document.getElementById(s).style.zIndex=-1
+			document.getElementById(s).style.display="none"
 			if(flag>0){
 				nowActive++;
 				if(nowActive == 8){
 					nowActive=1
 				}
 				s=nowActive+"_pic"
-				document.getElementById(s).style.zIndex=2
+				document.getElementById(s).style.display="block"
 			}else {
 				nowActive--;
 				if(nowActive == 0){
-					nowActive=5
+					nowActive=7
 				}
 				s=nowActive+"_pic"
-				document.getElementById(s).style.zIndex=2
+				document.getElementById(s).style.display="block"
 			}
 		}
 		
@@ -167,98 +179,6 @@
 
 
 
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			
-			min-height: 37.5rem;
-			
-			-webkit-tap-highlight-color: transparent;
-			
-		}
-
-		.iconfont {
-			font-size: 2rem;
-			margin-right: 0.8rem;
-			position: relative;
-			top: 0.35rem;
-		}
-
-
-		.title {
-			position: fixed;
-			left: 2rem;
-			top: 2rem;
-			z-index: 5;
-
-		}
-
-		.title-item {
-			margin-top: 3rem;
-		}
-
-		.title-item a {
-			color: #aaa;
-			padding: 2rem 0;
-			outline: none;
-			cursor: pointer;
-		}
-
-		.title-item a:hover {
-			color: black;
-		}
-
-
-		.container {
-			width: 90%;
-			margin: 0 auto;
-			text-align: center;
-			margin-top: 3rem;
-		}
-
-		.content {
-			padding: 2rem 6% 0 10%;
-			text-align: left;
-			position: relative;
-		}
-
-		.home {
-			position: relative;
-			overflow: hidden; 
-		}
-		
-		.slider {
-			position: absolute; 
-			z-index: 3;
-			opacity: 0;
-			height: 100%;
-			display: block;
-		}
-		.slider:hover{
-			opacity: 1;
-		}
-		.left-slider{
-			left: 0;
-			width: 45%;
-			background: rgba(255,255,255,0.15); 
-		}
-		.right-slider{
-			right: 10%;
-			width: 45%;
-			background: rgba(255,255,255,0.15);
-		}
-
-		.content-item {
-			display: none;
-		}
-
-		.home-img {
-			position: absolute;
-			width: 90%;
-			
-			z-index: 1;
-		}
-	</style>
+	
 
 </html>

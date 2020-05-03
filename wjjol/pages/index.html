@@ -55,7 +55,7 @@
 			</div>
 			<div class="container">
 				<div class="content">
-					<div style="position: relative;" id="home" class="content-item-active">
+					<div style="position: relative;" id="home" class="content-item-active ">
 						<a href="#" onclick="slide(-1)">
 							<div class="left-slider slider">
 								
@@ -129,7 +129,8 @@
 			//DIV高度为浏览器窗口的高度
 			var h=winHeight*6/5+ "px";
 			document.getElementById("home").style.height = h;
-			//document.getElementById("slider").style.height = h;
+			document.getElementsByClassName("slider")[0].style.height = h;
+			document.getElementsByClassName("slider")[1].style.height = h;
 		}
 
 		function activate(element) {
@@ -192,10 +193,12 @@
 				}
 				s=nowActive+"_pic"
 				var elee = document.getElementById(s)
-				elee.style.display="block"
+				
+				elee.className="img-cur"
+				/* elee.style.display="block"
 				setTimeout(function(){
 					elee.style.opacity=1
-				},200);
+				},200); */
 			}
 		}
 		

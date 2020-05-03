@@ -97,7 +97,7 @@ body {
 	    top: 0;
 	    left: 0;
 	
-	    transition: 1s;
+	    transition: 0.8s;
 	    opacity: 0;
 	    visibility: hidden;
 	    z-index: 0;
@@ -120,7 +120,7 @@ body {
 	    left: 0;
 		
 	    opacity: 1;
-		transition: 1s;
+		transition: 0.8s;
 	    visibility: visible;
 	    z-index: 2; 
 	}

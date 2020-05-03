@@ -154,21 +154,42 @@
 		
 		function slide(flag){
 			var s=nowActive+"_pic"
-			document.getElementById(s).style.display="none"
+			var ele = document.getElementById(s)
+			
+			ele.style.opacity="0.8"
+			
+			setTimeout(function(){
+				ele.style.display="none"
+			},100);
+			
+			
+			
+			
 			if(flag>0){
 				nowActive++;
 				if(nowActive == 8){
 					nowActive=1
 				}
 				s=nowActive+"_pic"
-				document.getElementById(s).style.display="block"
+				var elee = document.getElementById(s)
+				elee.style.display="block"
+				setTimeout(function(){
+					
+					
+					elee.style.opacity=1
+				},100);
+				
 			}else {
 				nowActive--;
 				if(nowActive == 0){
 					nowActive=7
 				}
 				s=nowActive+"_pic"
-				document.getElementById(s).style.display="block"
+				var elee = document.getElementById(s)
+				elee.style.display="block"
+				setTimeout(function(){
+					elee.style.opacity=1
+				},200);
 			}
 		}
 		

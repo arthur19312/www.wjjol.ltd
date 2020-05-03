@@ -50,6 +50,17 @@ document.getElementsByClassName("content").style.height= winHeight/2 +"px";
 window.οnresize=autodivheight; //浏览器窗口发生变化时同时变化DIV高度
 
 */
+
+
+
+
+btn2.on('click', function(e) {
+    container.css("display","block");
+    requestanimationframe(function(){
+       container.css("opacity","1");
+   });
+  });
+
 </script>
 
 <style>

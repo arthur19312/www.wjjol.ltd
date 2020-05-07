@@ -157,6 +157,30 @@ body {
 
 .clumn>.item>.item__content {
 	margin-bottom: 0.5rem;
-	color: white;
 	text-align: center;
+}
+
+.line {
+	height: 0;
+	border-top: 1px solid lightgrey;
+	text-align: center;
+	margin: 3rem auto 2rem auto;
+	width: 80%;
+	color: lightgray;
+}
+
+.text {
+	position: relative;
+	top: -0.6rem;
+	background-color: #fff;
+	padding: 0 1rem;
+	font-size: 0.8rem;
+}
+
+.pot-hr {
+	margin: 2rem auto 3rem auto;
+	background-color: #eee;
+	height: 1px;
+	width: 100%;
+	border: 0;
 }

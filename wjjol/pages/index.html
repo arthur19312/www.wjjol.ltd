@@ -77,9 +77,40 @@
 						</div>
 					</div>
 					
-						
 					<div id="potfolio" class="content-item">
-						potfolio
+						<div class="masonary">
+						            <div class="clumn">
+						                <div class="item"> 
+						                    <div class="item__content" style="height: 100px;background: lightblue;">1 </div> 
+						                    <div class="item__content" style="height: 210px;background: orange;"> 2</div> 
+						                    <div class="item__content" style="height: 110px;background: lightcoral;">3 </div> 
+						                    <div class="item__content" style="height: 170px;background: lightgray;"> 4</div> 
+						                    <div class="item__content" style="height: 100px;background: lightblue;">5 </div> 
+						                    <div class="item__content" style="height: 180px;background: lightsteelblue;">6 </div> 
+						                </div>
+						            </div>
+						            <div class="clumn">
+						                <div class="item"> 
+						                    
+						                    <div class="item__content" style="height: 100px;background: lightblue;"> 7</div> 
+						                    <div class="item__content" style="height: 120px;background: lightsteelblue;">8</div> 
+						                    <div class="item__content" style="height: 60px;background: orange;"> 9</div> 
+						                    <div class="item__content" style="height: 200px;background: orange;">10 </div> 
+						                    <div class="item__content" style="height: 100px;background: lightcoral;">11 </div> 
+						                    <div class="item__content" style="height: 260px;background: lightgray;">12 </div> 
+						                </div>
+						            </div>
+						            <div class="clumn">
+						                <div class="item"> 
+						                    <div class="item__content" style="height: 130px;background: lightcyan;">13 </div> 
+						                    <div class="item__content" style="height: 199px;background: orange;">14 </div> 
+						                    <div class="item__content" style="height: 160px;background: lightcoral;">15 </div> 
+						                    <div class="item__content" style="height: 146px;background: orange;">16 </div> 
+						                    <div class="item__content" style="height: 160px;background: lightcoral;">17 </div> 
+						                    <div class="item__content" style="height: 111px;background: orange;">18 </div> 
+						                </div>
+						            </div>
+						        </div>
 					</div>
 					<div id="blog" class="content-item">
 						blog
@@ -105,6 +136,7 @@
 		var nowActive =1
 		window.onload = function() {
 			document.getElementById("_home").style.color = "black"
+			activate(document.getElementById("_home"))
 			autodivheight();
 			var s=nowActive+"_pic"
 			document.getElementById(s).className="img-cur"

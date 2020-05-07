@@ -85,24 +85,24 @@ body {
 	display: none;
 }
 
-.content-item-active{
+.content-item-active {
 	display: block;
 }
 
-.home-img{
+.home-img {
 	width: 90%;
 	/*z-index: 1;*/
 	/*display: none;*/
 	position: absolute;
-	    top: 0;
-	    left: 0;
-	
-	    transition: 0.8s;
-	    opacity: 0;
-	    visibility: hidden;
-	    z-index: 0;
-	
-		/* transition: opacity 1s;
+	top: 0;
+	left: 0;
+
+	transition: 0.8s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 0;
+
+	/* transition: opacity 1s;
 		-webkit-transition: opacity 1s;
 		-moz-transition: opacity 1s;
 		-ms-transition: opacity 1s;
@@ -111,16 +111,52 @@ body {
 
 
 
-.img-cur{
+.img-cur {
 	width: 90%;
 	/*z-index: 1;*/
 	/*display: none;*/
 	position: absolute;
-	    top: 0;
-	    left: 0;
-		
-	    opacity: 1;
-		transition: 0.8s;
-	    visibility: visible;
-	    z-index: 2; 
+	top: 0;
+	left: 0;
+
+	opacity: 1;
+	transition: 0.8s;
+	visibility: visible;
+	z-index: 2;
+}
+
+
+.masonary {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+}
+
+@media only screen and (min-width: 500px) {
+	.masonary {
+		flex-direction: row;
 	}
+}
+
+.clumn {
+	margin-left: 0.5rem;
+	display: flex;
+	flex-flow: column wrap;
+	width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+	.clumn {
+		width: 100%;
+		max-width: 95%;
+		margin: auto;
+	}
+}
+
+.clumn>.item>.item__content {
+	margin-bottom: 0.5rem;
+	color: white;
+	text-align: center;
+}

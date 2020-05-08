@@ -232,6 +232,7 @@ a{
 .alloport{
     animation-name: alloani;
     animation-duration: 1s;
+	animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     background: orange;  /* fallback for old browsers */

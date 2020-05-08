@@ -101,24 +101,15 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	z-index: 0;
-
-	/* transition: opacity 1s;
-		-webkit-transition: opacity 1s;
-		-moz-transition: opacity 1s;
-		-ms-transition: opacity 1s;
-		-o-transition:opacity 1s; */
 }
 
 
 
 .img-cur {
 	width: 90%;
-	/*z-index: 1;*/
-	/*display: none;*/
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	opacity: 1;
 	transition: 0.8s;
 	visibility: visible;
@@ -184,3 +175,9 @@ body {
 	width: 100%;
 	border: 0;
 }
+
+.kaomoji-item{
+	line-height: 2rem;
+	padding-bottom: 1rem;
+	cursor: pointer;
+	}

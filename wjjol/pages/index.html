@@ -226,18 +226,26 @@
 					<div id="tool" class="content-item">
 						<div style="width: 25%;float: left;">
 							<div onclick="copyContent(this);" title="点击复制" class="kaomoji-item">张 三</div>
-								
-							
+
+
 
 						</div>
-						
+
 						<div style="width: 25%;float: left;">
-							
+
 						</div>
 						<div style="width: 50%;float: left;">
 
 						</div>
 						<input id="copy_content" type="text" value="" style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;" />
+
+						<div class="parent-tip">
+							<div class="tip-rest" id="copy_tip">
+								<span class="global-msg-tip">已复制</span>
+							</div>
+						</div>
+
+
 					</div>
 					<div id="diary" class="content-item">
 						diary
@@ -365,6 +373,19 @@
 			document.execCommand("Copy");
 			//提示已复制
 			alert('已复制');
+			showToast()
+
+		}
+
+		function showToast() { //消息弹出框
+			var tip = document.getElementById('copy_tip')
+			tip.className = "tip-appear"
+			setTimeout(function() {
+				tip.className = "tip-disappear"
+			}, 500);
+			setTimeout(function() {
+				tip.className = "tip-appear"
+			}, 500);
 
 
 		}

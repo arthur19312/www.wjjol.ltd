@@ -176,8 +176,43 @@ body {
 	border: 0;
 }
 
-.kaomoji-item{
+.kaomoji-item {
 	line-height: 2rem;
 	padding-bottom: 1rem;
 	cursor: pointer;
+}
+
+
+
+.parent-tip {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50px;
+	z-index: 30;
+	margin: 0 auto;
+	width: 100px;
+	text-align: center;
+
+}
+
+.global-msg-tip {
+	background-color: lightskyblue;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	padding: 0.8rem 1rem;
+	color: white;
+}
+
+.tip-rest{
+	opacity: 0;
 	}
+
+.tip-appear {
+	opacity: 1;
+}
+
+.tip-disappear {
+	opacity: 0;
+	transition: opacity 1s;
+}

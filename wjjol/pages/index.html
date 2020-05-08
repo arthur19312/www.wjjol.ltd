@@ -372,20 +372,20 @@
 			// 执行浏览器复制命令
 			document.execCommand("Copy");
 			//提示已复制
-			alert('已复制');
 			showToast()
 
 		}
 
 		function showToast() { //消息弹出框
 			var tip = document.getElementById('copy_tip')
-			tip.className = "tip-appear"
+			setTimeout(function() {
+				tip.className = "tip-appear"
+			}, 200);
+			
 			setTimeout(function() {
 				tip.className = "tip-disappear"
 			}, 500);
-			setTimeout(function() {
-				tip.className = "tip-appear"
-			}, 500);
+				tip.className = "tip-rest"
 
 
 		}

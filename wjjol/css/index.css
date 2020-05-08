@@ -222,3 +222,12 @@ body {
 	opacity: 0;
 	transition: opacity 1s;
 }
+
+
+.git{
+	color: skyblue;
+}
+.git div{
+	padding-bottom: 6rem;
+	letter-spacing: 2rem;
+}

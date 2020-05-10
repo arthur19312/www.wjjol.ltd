@@ -217,7 +217,7 @@
 						<img src="../static/img/github/github.png" style="width: 40%;height: auto;float: left;">
 						<img src="../static/img/github/str.png" class="git-str" />
 						<div style="float: left;margin-left: 10%;">
-								<a href="https://github.com/arthur19312" class="git">
+								<a href="https://github.com/arthur19312" target="_blank" class="git">
 									<div>
 										https:~✧/
 									</div>
@@ -482,6 +482,14 @@
 			autodivheight();
 			var s = nowActive + "_pic"
 			document.getElementById(s).className = "img-cur"
+			
+			
+			if("loading" in HTMLImageElement.prototype){
+			console.log("支持懒加载");
+			
+			}else{
+			console.log("不支持懒加载，你可能需要引入懒加载库来实现懒加载");
+			}
 
 		}
 
@@ -596,7 +604,7 @@
 			var tip = document.getElementById('copy_tip')
 			setTimeout(function() {
 				tip.className = "tip-appear"
-			}, 200);
+			}, 100);
 
 			setTimeout(function() {
 				tip.className = "tip-disappear"

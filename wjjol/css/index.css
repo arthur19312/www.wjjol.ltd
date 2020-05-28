@@ -186,11 +186,13 @@ body {
 	cursor: pointer;
 	color: #999;
 	border: 1px #eee solid;
+	background-color: rgba(255,255,255,1);
 }
 
 .kaomoji-item:hover{
 	color: #333;
 	transform: scale(1.5);
+	border-color: lightskyblue;
 	}
 
 

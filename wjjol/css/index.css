@@ -117,34 +117,52 @@ body {
 	visibility: visible;
 	z-index: 2;
 }
-
-
-.masonary {
+.main{
 	width: 100%;
 	margin: auto;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	height: auto;
 }
 
-@media only screen and (min-width: 500px) {
-	.masonary {
-		flex-direction: row;
-	}
+.masonary {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	height: auto;
 }
 
+
 .clumn {
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 	display: flex;
 	flex-flow: column wrap;
 	width: 100%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1260px) {
+	.clumn {
+		width: 50%;
+		max-width: 50%;
+		margin-left: 1rem;
+	}
+	.main{
+		flex-direction: column;
+	}
+	.masonary {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
 	.clumn {
 		width: 100%;
 		max-width: 95%;
 		margin: auto;
+	}
+	.masonary {
+		flex-direction: column;
 	}
 }
 
@@ -153,25 +171,32 @@ body {
 	text-align: center;
 }
 
+.item__content img{
+	border-radius: 0.5rem;
+}
+
 .line {
 	height: 0;
 	border-top: 1px solid lightgrey;
 	text-align: center;
-	margin: 3rem auto 2rem auto;
+	margin: 2rem auto 1rem auto;
 	width: 80%;
 	color: lightgray;
 }
 
 .text {
 	position: relative;
-	top: -0.6rem;
+	top: -0.7rem;
 	background-color: #fff;
 	padding: 0 1rem;
 	font-size: 0.8rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .pot-hr {
-	margin: 2rem auto 3rem auto;
+	margin: 1rem auto 2rem auto;
 	background-color: #eee;
 	height: 1px;
 	width: 100%;
@@ -192,6 +217,7 @@ body {
 .kaomoji-item:hover{
 	color: #333;
 	transform: scale(1.5);
+	transition: all 0.01s; 
 	border-color: lightskyblue;
 	}
 

@@ -153,6 +153,9 @@ body {
 	.masonary {
 		width: 100%;
 	}
+	.title-content{
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 600px) {

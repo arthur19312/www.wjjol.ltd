@@ -7,6 +7,10 @@ body {
 	min-height: 37.5rem;
 
 	-webkit-tap-highlight-color: transparent;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 
 }
 
@@ -143,22 +147,26 @@ body {
 
 @media only screen and (max-width: 1260px) {
 	.clumn {
-		width: 50%;
-		max-width: 50%;
+		width: 90%;
 		margin-left: 1rem;
 	}
-	.main{
+	/* .main{
 		flex-direction: column;
-	}
+	} */
 	.masonary {
 		width: 100%;
+		flex-direction: column;
 	}
 	.title-content{
 		display: none;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+	
+	.main{
+		flex-direction: column;
+	}
 	.clumn {
 		width: 100%;
 		max-width: 95%;

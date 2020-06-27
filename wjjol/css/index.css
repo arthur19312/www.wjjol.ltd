@@ -4,7 +4,6 @@ body {
 
 	font-family: "microsoft yahei";
 
-	min-height: 37.5rem;
 
 	-webkit-tap-highlight-color: transparent;
 	-moz-user-select: none;
@@ -15,7 +14,7 @@ body {
 }
 
 .iconfont {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	margin-right: 0.8rem;
 	position: relative;
 	top: 0.35rem;
@@ -30,6 +29,10 @@ body {
 
 }
 
+.title-fold{
+	display: none;
+}
+
 .title-item {
 	margin-top: 3rem;
 }
@@ -41,9 +44,15 @@ body {
 	cursor: pointer;
 }
 
-.title-item a:hover {
-	color: black;
+.title-item:hover {
+	color: #000000;
 }
+
+.title-content{
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+}
+
 
 
 .container {
@@ -54,7 +63,7 @@ body {
 }
 
 .content {
-	padding: 2rem 4% 0 12%;
+	padding: 2rem 0 0 16rem;
 	text-align: left;
 	position: relative;
 }
@@ -95,14 +104,15 @@ body {
 	display: block;
 }
 
+#home{
+	position: relative;
+}
+
 .home-img {
 	width: 90%;
-	/*z-index: 1;*/
-	/*display: none;*/
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	transition: 0.8s;
 	opacity: 0;
 	visibility: hidden;
@@ -145,37 +155,6 @@ body {
 	width: 100%;
 }
 
-@media only screen and (max-width: 1260px) {
-	.clumn {
-		width: 90%;
-		margin-left: 1rem;
-	}
-	/* .main{
-		flex-direction: column;
-	} */
-	.masonary {
-		width: 100%;
-		flex-direction: column;
-	}
-	.title-content{
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	
-	.main{
-		flex-direction: column;
-	}
-	.clumn {
-		width: 100%;
-		max-width: 95%;
-		margin: auto;
-	}
-	.masonary {
-		flex-direction: column;
-	}
-}
 
 .clumn>.item>.item__content {
 	margin-bottom: 0.5rem;
@@ -286,3 +265,85 @@ body {
 	width: 12%;
 	opacity: 0.8;
 }
+
+
+.short-line {
+    background-color: #888;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    transition: .3s ease;
+
+}
+
+.top {
+    top: 4px;
+}
+
+.middle {
+    top: 14px;
+}
+
+.bottom {
+    top: 24px;
+}
+
+
+.container-hover .short-line{
+	background-color: #222;
+}
+.container-click .short-line{
+	background-color: #222;
+}
+
+.container-click .top {
+	top:10px;
+	width: 30px;
+    transform: rotate(45deg);
+}
+.container-click .middle {
+    opacity: 0;
+}
+.container-click .bottom {
+	top:10px;
+	width: 30px;
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

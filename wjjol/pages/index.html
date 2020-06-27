@@ -6,6 +6,7 @@
 	</head>
 	<link rel="stylesheet" href="../static/font/iconfont.css">
 	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/response.css">
 	<body ondragstart="return false">
 
 		<div>
@@ -23,7 +24,6 @@
 					</a>
 				</div>
 				<div class="title-item">
-
 					<a id="_blog" onclick="activate(this)">
 						<span class="iconfont icon-blog"></span>
 						<span class="title-content">BLOG</span>
@@ -54,9 +54,15 @@
 					</a>
 				</div>
 			</div>
+			<div class="title-fold" id="title-fold">
+				<span class="short-line top"></span>
+				<span class="short-line middle"></span>
+				<span class="short-line bottom"></span>
+			</div>
+			
 			<div class="container">
 				<div class="content">
-					<div style="position: relative;" id="home" class="content-item-active ">
+					<div id="home" class="content-item-active ">
 						<a href="#" onclick="slide(-1)">
 							<div class="left-slider slider">
 
@@ -96,7 +102,7 @@
 										<div class="item__content">
 											<img src="../static/img/potfolio/shenzhen.jpg" style="width: 100%;height: auto;">
 											<div class="line">
-												<span class="text">2019 年 8 月 11 日 ~ 14 日</span>
+												<span class="text">2019 年 8 月 11 日</span>
 											</div>
 											<div style="color: gray;">
 												深 圳
@@ -106,7 +112,7 @@
 										<div class="item__content">
 											<img src="../static/img/potfolio/shenzhenxiaoqu.jpg" style="width: 100%;height: auto;">
 											<div class="line">
-												<span class="text">2019 年 8 月 11 日 ~ 14 日</span>
+												<span class="text">2019 年 8 月 11 日</span>
 											</div>
 											<div style="color: gray;">
 												深 圳 · 校 区
@@ -123,7 +129,7 @@
 										<div class="item__content">
 											<img src="../static/img/potfolio/dalian.jpg" style="width: 100%;height: auto;">
 											<div class="line">
-												<span class="text">2019 年 9 月 28 日 ~ 10 月 6 日</span>
+												<span class="text">2019 年 9 月 28 日</span>
 											</div>
 											<div style="color: gray;">
 												大 连 · 旅 顺
@@ -135,7 +141,7 @@
 										<div class="item__content">
 											<img src="../static/img/potfolio/weihai.jpg" style="width: 100%;height: auto;">
 											<div class="line">
-												<span class="text">2019 年 9 月 28 日 ~ 10 月 6 日</span>
+												<span class="text">2019 年 9 月 28 日</span>
 											</div>
 											<div style="color: gray;">
 												威 海
@@ -173,7 +179,7 @@
 										<div class="item__content">
 											<img src="../static/img/potfolio/light.jpg" style="width: 100%;height: auto;">
 											<div class="line">
-												<span class="text">2020 年 3 月 6 日 ~ 8 日</span>
+												<span class="text">2020 年 3 月 6 日</span>
 											</div>
 											<div style="color: gray;">
 												流 光
@@ -198,7 +204,7 @@
 										<div class="item__content">
 											<img src="../static/img/potfolio/harbin.jpg" style="width: 100%;height: auto;">
 											<div class="line">
-												<span class="text">2017 年 ~ 2018 年</span>
+												<span class="text">2017 年</span>
 											</div>
 											<div style="color: gray;">
 												哈 尔 滨
@@ -499,9 +505,9 @@
 			</div>
 		</div>
 	</body>
-	<script src="../js/sketch.js"></script>
-	<script src="../js/firework.js"></script>
 	<script>
+		const $ = ele => typeof ele === "string" ? document.querySelector(ele) : "";
+		
 		var nowActive = 1
 		window.onload = function() {
 			document.getElementById("_home").style.color = "black"
@@ -520,7 +526,7 @@
 
 		}
 
-		window.οnresize = autodivheight; //浏览器窗口发生变化时同时变化DIV高度
+		window.οnresize = autodivheight(); //浏览器窗口发生变化时同时变化DIV高度
 
 		function autodivheight() { //函数：获取尺寸
 			//获取浏览器窗口高度
@@ -537,9 +543,10 @@
 						} */
 			//DIV高度为浏览器窗口的高度
 			var h = winHeight * 6 / 5 + "px";
+			var h1 = document.getElementById("1_pic").clientHeight+"px";
 			document.getElementById("home").style.height = h;
-			document.getElementsByClassName("slider")[0].style.height = h;
-			document.getElementsByClassName("slider")[1].style.height = h;
+			document.getElementsByClassName("slider")[0].style.height = h1;
+			document.getElementsByClassName("slider")[1].style.height = h1;
 		}
 
 		function activate(element) {
@@ -640,6 +647,27 @@
 
 
 		}
+		
+		const con = $(".title-fold");
+		    con.onmouseenter = () => con.classList.add("container-hover");
+		    con.onmouseleave = () => con.classList.remove("container-hover");
+		
+		    con.onclick = () =>{
+				console.log("enter")
+				
+				if(con.classList.contains("container-click")){
+					con.classList.remove("container-click");
+				}else{
+		        con.classList.remove("container-hover");
+		        con.classList.add("container-click");
+				}
+		    }
+		    window.onclick = e => {
+				console.log(e.target.className.split(' ')[0]);
+		        if( e.target.className.split(' ')[0] !== "title-fold" && e.target.className.split(' ')[0] !== "short-line" ) 
+		            con.classList.remove("container-click");
+		    }
+		
 	</script>
 
 

@@ -298,7 +298,7 @@ body {
 }
 
 .container-click .top {
-	top:10px;
+	top:12px;
 	width: 30px;
     transform: rotate(45deg);
 }
@@ -306,7 +306,7 @@ body {
     opacity: 0;
 }
 .container-click .bottom {
-	top:10px;
+	top:12px;
 	width: 30px;
     transform: rotate(-45deg);
 }

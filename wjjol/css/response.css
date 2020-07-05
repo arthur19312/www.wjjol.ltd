@@ -57,6 +57,10 @@
 		text-align: left;
 		position: relative;
 	}
+	
+	.cover{
+		z-index: 5;
+	}
 }
 
 
@@ -67,7 +71,7 @@
 	height: 100%;
 	background-color: #fff;
 	transition: .5s ease;
-	z-index: 6;
+	z-index: -1;
 }
 
 .invisible{

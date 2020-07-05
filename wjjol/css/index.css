@@ -200,14 +200,14 @@ body {
 	margin: 0.1rem 0.1rem;
 	cursor: pointer;
 	color: #999;
-	border: 1px #eee solid;
+	border: 2px #eee solid;
 	background-color: rgba(255,255,255,1);
 }
 
 .kaomoji-item:hover{
 	color: #333;
 	transform: scale(1.5);
-	transition: all 0.01s; 
+	transition: all 0.005s; 
 	border-color: lightskyblue;
 	}
 

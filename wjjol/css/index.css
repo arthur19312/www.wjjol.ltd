@@ -141,7 +141,6 @@ body {
 
 .masonary {
 	width: 50%;
-	margin: auto;
 	display: flex;
 	flex-direction: row;
 	height: auto;
@@ -191,6 +190,10 @@ body {
 	height: 1px;
 	width: 100%;
 	border: 0;
+}
+
+.kao-line{
+	width: 10%;float: left;
 }
 
 .kaomoji-item {
@@ -259,11 +262,19 @@ body {
 .git-str {
 	position: absolute;
 	top: 14rem;
-	left: 39%;
+	left: 42%;
 	z-index: 10;
 	margin: 0 auto;
 	width: 12%;
 	opacity: 0.8;
+}
+.git-img{
+	width: 40%;height: auto;float: left;
+}
+
+.github-link{
+	float: left;
+	margin-left: 10%;
 }
 
 

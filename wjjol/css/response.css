@@ -1,14 +1,26 @@
 
+@media only screen and (max-width: 1350px) {
+	.github-link, .git-str{
+		display: none;
+	}
+	.git-img{
+		width: 100%;
+	}
+}
+
+
 @media only screen and (max-width: 1200px) {
 	.clumn {
 		width: 90%;
 		margin-left: 1rem;
 	}
 	.masonary {
-		width: 100%;
+		width: 80%;
 		flex-direction: column;
 	}
-	
+	.kao-line{
+		width: 20%;
+	}
 	
 	
 }
@@ -61,6 +73,8 @@
 	.cover{
 		z-index: 5;
 	}
+	
+	
 }
 
 
@@ -80,4 +94,32 @@
 
 .visible{
 	opacity: 1;
+}
+
+
+
+@media only screen and (max-height: 700px) {
+	/* contents */
+	.title{
+		position: absolute;
+		top: 0;
+	}
+	
+	.container{
+		position: absolute;
+		top: 0;
+	}
+	
+	.content{
+		padding-top: 1rem;
+	}
+	
+	.git-str{
+		left: 46%;
+		top: 10rem;
+	}
+	.git div {
+		padding-bottom: 4rem;
+		letter-spacing: 1rem;
+	}
 }

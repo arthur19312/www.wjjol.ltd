@@ -6,21 +6,45 @@
     <title>焦点图</title>
 </head>
 
+<style type="text/css">
+    .a, .b, .c {
+        box-sizing: border-box;
+        border: 1px solid;
+    }
+    .wrap {
+        width: 250px;
+    }
+    .a {
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    .b {
+        width: 100px;
+        height: 50px;
+        float: left;
+    }
+    .c {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+    }
+</style>
+
 <body>
-    <dl id="menu" style="position: relative;">
-        <dt style="position: absolute;">
-            <a href="#img1">1</a>
-            <a href="#img2">2</a>
-            <a href="#img3">3</a>
-            <a href="#img4">4</a>
-        </dt>
-        <dd style="overflow: hidden;height: 600px;">
-            <img src="../static/img/oooo.png" id="img1" />
-            <img src="../static/img/jgqw.png" id="img2" />
-            <img src="../static/img/oooo.png" id="img3" />
-            <img src="../static/img/jgqw.png" id="img4" />
-        </dd>
-    </dl>
+
+<span style="color: rgb(51,51,51);"> </span>
+<span style="color: rgb(51,51,51);"> </span>
+<div class="wrap">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+</div> 
+
+
+<div>
+	<strong style="width:80px;height:50px">dsadas</strong>
+</div>
 </body>
 
 <script>
@@ -52,56 +76,36 @@ window.οnresize=autodivheight; //浏览器窗口发生变化时同时变化DIV�
 */
 
 
+var twoSum = function(nums, target) {
+	debugger;
+    let x = target/2;
+	let p=nums.indexOf(x);
+	if(p>-1){
+		let pp = nums.indexOf(x,p+1);
+		if(pp>-1){
+			return [p,pp];
+		}
+	}
+	
+	let s = nums.filter(function(item, index, array){
+		return (item < x);
+	});
+	let n = s.length;
+	
+    for(let i=0;i<n;i++){
+		let f = nums.indexOf(target-s[i]);
+        if(f>-1){
+			return [nums.indexOf(s[i]), f];
+		}
+    }
+};
 
 
-btn2.on('click', function(e) {
-    container.css("display","block");
-    requestanimationframe(function(){
-       container.css("opacity","1");
-   });
-  });
+console.log(twoSum([3,2,3], 6));
+
+
 
 </script>
 
-<style>
-   /* *{
-    margin:0;
-    padding:0;
-    }
-    #menu{
-        position: relative;
-        width: 730px;
-        height :454px ;
-        margin:6px auto;
-    }
-    #menu dt{
-        position: absolute ;
-        right:5px;
-        bottom:5px;
-    }
-    #menu dt a {
-        float: left;
-        display: block;
-        font-size: 12px;
-        text-decoration: none;
-        color: #309;
-        background: #999;
-        border: 1px solid #cCC;
-        margin-left: 2px;
-        padding: 1px 4px;
-    }
-    #menu dt a:hover {
-        background: #fff;
-        color: #f00;
-    }
-
-    #menu dd{
-        width: 730px;
-        height:454px;
-        overflow: hidden;
-    }
-*/
-
-</style>
 
 </html>

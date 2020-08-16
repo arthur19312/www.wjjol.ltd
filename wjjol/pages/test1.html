@@ -76,32 +76,32 @@ window.οnresize=autodivheight; //浏览器窗口发生变化时同时变化DIV�
 */
 
 
-var twoSum = function(nums, target) {
-	debugger;
-    let x = target/2;
-	let p=nums.indexOf(x);
-	if(p>-1){
-		let pp = nums.indexOf(x,p+1);
-		if(pp>-1){
-			return [p,pp];
+/* let n = readline();
+let arr = readline().split(/\s+/); */
+let n = 10;
+let arr = "53941 38641 31525 75864 29026 12199 83522 58200 64784 80987".split(/\s+/);
+let n1 = n-1;
+
+			console.log(arr);
+for(let i=0;i<n1;i++){
+	let tmp = arr[i];
+	for(let j=i+1;j<n;j++){
+		let cur = arr[j];
+		if((cur < tmp) && ((cur-tmp)%2 !=0)){
+			console.log(cur +" "+ tmp);
+			arr[j] = tmp;
+			arr[i] = cur;
+			
+			tmp = cur;
+			
+			console.log(arr);
 		}
 	}
-	
-	let s = nums.filter(function(item, index, array){
-		return (item < x);
-	});
-	let n = s.length;
-	
-    for(let i=0;i<n;i++){
-		let f = nums.indexOf(target-s[i]);
-        if(f>-1){
-			return [nums.indexOf(s[i]), f];
-		}
-    }
-};
+}
 
+//print(arr.join(" "));
+console.log(arr);
 
-console.log(twoSum([3,2,3], 6));
 
 
 

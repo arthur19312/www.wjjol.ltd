@@ -33,18 +33,22 @@ body {
 	display: none;
 }
 
-.title-item {
+.title-item, .title-item-m {
 	margin-top: 3rem;
 }
 
-.title-item a {
+.title-item-m {
+	padding-left: 3rem;
+}
+
+.title-item a,.title-item-m a {
 	color: #aaa;
 	padding: 2rem 0;
 	outline: none;
 	cursor: pointer;
 }
 
-.title-item:hover {
+.title-item a:hover {
 	color: #000000;
 }
 

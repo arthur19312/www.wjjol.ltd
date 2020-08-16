@@ -59,6 +59,48 @@
 				<span class="short-line bottom"></span>
 			</div>
 			<div class="cover invisible">
+				<div class="title-item-m">
+					<a id="_home" onclick="activateMobile(this)">
+						<span class="iconfont icon-home"></span>
+						<span class="title-content">HOME</span>
+					</a>
+				</div>
+				<div class="title-item-m">
+					<a id="_potfolio" onclick="activateMobile(this)">
+						<span class="iconfont icon-potfolio"></span>
+						<span class="title-content">POTFOLIO</span>
+					</a>
+				</div>
+				<div class="title-item-m">
+					<a id="_blog" onclick="activateMobile(this)">
+						<span class="iconfont icon-blog"></span>
+						<span class="title-content">BLOG</span>
+					</a>
+				</div>
+				<div class="title-item-m">
+					<a id="_github" onclick="activateMobile(this)">
+						<span class="iconfont icon-github"></span>
+						<span class="title-content">GITHUB</span>
+					</a>
+				</div>
+				<div class="title-item-m">
+					<a id="_tool" onclick="activateMobile(this)">
+						<span class="iconfont icon-tool"></span>
+						<span class="title-content">TOOL</span>
+					</a>
+				</div>
+				<div class="title-item-m">
+					<a id="_diary" onclick="activateMobile(this)">
+						<span class="iconfont icon-diary"></span>
+						<span class="title-content">DIARY</span>
+					</a>
+				</div>
+				<div class="title-item-m">
+					<a id="_contact" onclick="activateMobile(this)">
+						<span class="iconfont icon-contact"></span>
+						<span class="title-content">CONTACT</span>
+					</a>
+				</div>
 				
 			</div>
 			
@@ -510,6 +552,8 @@
 	</body>
 	<script>
 		const $ = ele => typeof ele === "string" ? document.querySelector(ele) : "";
+		const con = $(".title-fold");
+		const cov = $(".cover");
 		
 		var nowActive = 1
 		window.onload = function() {
@@ -572,6 +616,22 @@
 				p[i].className = "content-item"
 			}
 			x.className = "content-item-active"
+		}
+		
+		function activateMobile(element) {
+		
+			var s = element.id.slice(1)
+			var x = document.getElementById(s)
+			var p = x.parentNode.children
+			var n = p.length
+			for (var i = 0; i < n; i++) {
+				p[i].className = "content-item"
+			}
+			x.className = "content-item-active"
+			
+			cov.classList.remove("visible");
+			cov.classList.add("invisible");
+			con.classList.remove("container-click");
 		}
 
 
@@ -654,13 +714,11 @@
 
 		}
 		
-		const con = $(".title-fold");
-		const cov = $(".cover");
+		
 		    con.onmouseenter = () => con.classList.add("container-hover");
 		    con.onmouseleave = () => con.classList.remove("container-hover");
 		
 		    con.onclick = () =>{
-				console.log("enter")
 				
 				if(con.classList.contains("container-click")){
 					con.classList.remove("container-click");
@@ -683,11 +741,10 @@
 				
 				
 		    }
-		    window.onclick = e => {
-				console.log(e.target.className.split(' ')[0]);
+		    /* window.onclick = e => {
 		        if( e.target.className.split(' ')[0] !== "title-fold" && e.target.className.split(' ')[0] !== "short-line" ) 
 		            con.classList.remove("container-click");
-		    }
+		    } */
 		
 	</script>
 

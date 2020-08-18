@@ -63,11 +63,12 @@ body {
 	width: 96%;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 3rem;
+	padding-top: 3rem;
 }
 
 .content {
-	padding: 2rem 0 0 16rem;
+	padding-top: 2rem;
+	padding-left: 16rem;
 	text-align: left;
 	position: relative;
 }
@@ -89,14 +90,14 @@ body {
 }
 
 .left-slider {
-	left: 0;
-	width: 45%;
+	left: 10%;
+	width: 35%;
 	background: rgba(255, 255, 255, 0.15);
 }
 
 .right-slider {
-	right: 10%;
-	width: 45%;
+	right: 20%;
+	width: 35%;
 	background: rgba(255, 255, 255, 0.15);
 }
 
@@ -113,10 +114,10 @@ body {
 }
 
 .home-img {
-	width: 90%;
+	width: 70%;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 10%;
 	transition: 0.8s;
 	opacity: 0;
 	visibility: hidden;
@@ -126,10 +127,10 @@ body {
 
 
 .img-cur {
-	width: 90%;
+	width: 70%;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 10%;
 	opacity: 1;
 	transition: 0.8s;
 	visibility: visible;
@@ -324,6 +325,118 @@ body {
 	top:12px;
 	width: 30px;
     transform: rotate(-45deg);
+}
+
+#loading{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 99;
+}
+
+.heart{
+	width: 100px;
+	height: 100px;
+	background-color: #eb3f84;
+	top:30%;left:50%;
+	transform: translateX(-50%) rotate(45deg);
+	position: absolute;
+	z-index: 99;
+	animation: middle 3s ease infinite;
+	transition: all 1s ease;
+}
+
+
+.heart::before{
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-color: #eb3f84;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	animation: left 3s ease infinite;
+	transition: all 1s ease;
+}
+
+.heart::after{
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-color: #eb3f84;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 50px;
+	animation: right 3s ease infinite;
+	transition: all 1s ease;
+}
+
+@keyframes left{
+	0%{
+		top:0;
+		background-color: #fff;
+	}
+	20%{
+		top:-50px;
+	}
+	60%{
+		background-color: #EB3F84;
+	}
+	80%{
+		top:-50px;
+	}
+	100%{
+		top:0;
+		background-color: #fff;
+	}
+}
+
+@keyframes right{
+	0%{
+		left:0;
+		background-color: #fff;
+	}
+	20%{
+		left:-50px;
+	}
+	60%{
+		background-color: #EB3F84;
+	}
+	80%{
+		left:-50px;
+	}
+	100%{
+		left:0;
+		background-color: #fff;
+	}
+}
+
+@keyframes middle{
+	0%{
+		transform: rotate(0deg);
+		border-radius: 100px;
+		background-color: #fff;
+	}
+	20%{
+		transform: rotate(45deg);
+		border-radius: 10px;
+	}
+	
+	60%{
+		background-color: #EB3F84;
+	}
+	80%{
+		transform: rotate(45deg);
+		border-radius: 10px;
+	}
+	100%{
+		transform: rotate(90deg);
+		border-radius: 100px;
+		background-color: #fff;
+	}
 }
 
 

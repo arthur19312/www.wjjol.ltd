@@ -158,16 +158,7 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									<div class="item__content">
-										<img src="../static/img/potfolio/shenzhenxiaoqu.jpg" style="width: 100%;height: auto;">
-										<div class="line">
-											<span class="text">2019 年 8 月 11 日</span>
-										</div>
-										<div style="color: gray;">
-											深 圳 · 校 区
-										</div>
-										<hr class="pot-hr" />
-									</div>
+									
 
 
 
@@ -197,16 +188,7 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									<div class="item__content">
-										<img src="../static/img/potfolio/xiamen.jpg" style="width: 100%;height: auto;">
-										<div class="line">
-											<span class="text">2017 年 8 月</span>
-										</div>
-										<div style="color: gray;">
-											厦 门
-										</div>
-										<hr class="pot-hr" />
-									</div>
+									
 
 								</div>
 							</div>
@@ -224,27 +206,17 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-
-									<div class="item__content">
-										<img src="../static/img/potfolio/light.jpg" style="width: 100%;height: auto;">
+<div class="item__content">
+										<img src="../static/img/potfolio/shenzhenxiaoqu.jpg" style="width: 100%;height: auto;">
 										<div class="line">
-											<span class="text">2020 年 3 月 6 日</span>
+											<span class="text">2019 年 8 月 11 日</span>
 										</div>
 										<div style="color: gray;">
-											流 光
+											深 圳 · 校 区
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									<div class="item__content">
-										<img src="../static/img/potfolio/black.jpg" style="width: 100%;height: auto;">
-										<div class="line">
-											<span class="text">2019 年 9 月 22 日</span>
-										</div>
-										<div style="color: gray;">
-											黑 白
-										</div>
-										<hr class="pot-hr" />
-									</div>
+									
 
 								</div>
 							</div>
@@ -261,15 +233,16 @@
 										<hr class="pot-hr" />
 									</div>
 									<div class="item__content">
-										<img src="../static/img/potfolio/xue.jpg" style="width: 100%;height: auto;">
+										<img src="../static/img/potfolio/xiamen.jpg" style="width: 100%;height: auto;">
 										<div class="line">
-											<span class="text">2020 年 1 月</span>
+											<span class="text">2017 年 8 月</span>
 										</div>
 										<div style="color: gray;">
-											雪
+											厦 门
 										</div>
 										<hr class="pot-hr" />
 									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -589,14 +562,10 @@
 			var h1 = document.getElementById("1_pic").clientHeight + "px";
 			console.log( h1);
 			
-			//document.getElementById("home").style.height = h;
 			document.getElementsByClassName("slider")[0].style.height = h1;
 			document.getElementsByClassName("slider")[1].style.height = h1;
 
 		}
-
-			
-		
 
 		function activate(element) {
 
@@ -633,21 +602,11 @@
 			con.classList.remove("container-click");
 		}
 
-
 		function slide(flag) {
 			var s = nowActive + "_pic"
 			var ele = document.getElementById(s)
 
-			/* ele.style.opacity="0.8"
-			
-			setTimeout(function(){
-				ele.style.display="none"
-			},100);
-			 */
-
 			ele.className = "home-img"
-
-
 
 			if (flag > 0) {
 				nowActive++;
@@ -656,16 +615,7 @@
 				}
 				s = nowActive + "_pic"
 				var elee = document.getElementById(s)
-
 				elee.className = "img-cur"
-
-
-				/* elee.style.display="block"
-				setTimeout(function(){
-					
-					
-					elee.style.opacity=1
-				},100); */
 
 			} else {
 				nowActive--;
@@ -674,12 +624,7 @@
 				}
 				s = nowActive + "_pic"
 				var elee = document.getElementById(s)
-
 				elee.className = "img-cur"
-				/* elee.style.display="block"
-				setTimeout(function(){
-					elee.style.opacity=1
-				},200); */
 			}
 		}
 
@@ -735,15 +680,7 @@
 				cov.classList.remove("invisible");
 				cov.classList.add("visible");
 			}
-
-
-
-
 		}
-		/* window.onclick = e => {
-		    if( e.target.className.split(' ')[0] !== "title-fold" && e.target.className.split(' ')[0] !== "short-line" ) 
-		        con.classList.remove("container-click");
-		} */
 	</script>
 
 

@@ -8,7 +8,11 @@
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('index.css'); ?>">
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('response.css'); ?>">
 	<body ondragstart="return false">
-
+<div id="loading">
+			<div class="heart">
+				
+			</div>
+		</div>
 		<div class="title">
 			<div class="title-item">
 				<a id="_home" onclick="activate(this)">
@@ -118,13 +122,13 @@
 						</div>
 					</a>
 					<div class="home">
-						<img id="1_pic" src="<?php $this->options->themeUrl('img/home/1.jpg'); ?>" class="home-img">
-						<img id="2_pic" src="<?php $this->options->themeUrl('img/home/2.jpg'); ?>" class="home-img">
-						<img id="3_pic" src="<?php $this->options->themeUrl('img/home/3.jpg'); ?>"" class="home-img">
-						<img id="4_pic" src="<?php $this->options->themeUrl('img/home/4.jpg'); ?>" class="home-img">
-						<img id="5_pic" src="<?php $this->options->themeUrl('img/home/5.jpg'); ?>" class="home-img">
-						<img id="6_pic" src="<?php $this->options->themeUrl('img/home/6.jpg'); ?>" class="home-img">
-						<img id="7_pic" src="<?php $this->options->themeUrl('img/home/7.jpg'); ?>" class="home-img">
+						<img id="1_pic" src="<?php $this->options->themeUrl('img/home/1.jpg'); ?>" class="home-img" >
+						<img id="2_pic" src="<?php $this->options->themeUrl('img/home/2.jpg'); ?>" class="home-img" loading="lazy">
+						<img id="3_pic" src="<?php $this->options->themeUrl('img/home/3.jpg'); ?>" class="home-img" loading="lazy">
+						<img id="4_pic" src="<?php $this->options->themeUrl('img/home/4.jpg'); ?>" class="home-img" loading="lazy">
+						<img id="5_pic" src="<?php $this->options->themeUrl('img/home/5.jpg'); ?>" class="home-img" loading="lazy">
+						<img id="6_pic" src="<?php $this->options->themeUrl('img/home/6.jpg'); ?>" class="home-img" loading="lazy">
+						<img id="7_pic" src="<?php $this->options->themeUrl('img/home/7.jpg'); ?>" class="home-img" loading="lazy">
 					</div>
 				</div>
 
@@ -143,7 +147,7 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									<div class="item__content">
+<div class="item__content">
 										<img src="<?php $this->options->themeUrl('img/potfolio/shenzhen.jpg'); ?>" style="width: 100%;height: auto;" loading="lazy">
 										<div class="line">
 											<span class="text">2019 年 8 月 11 日</span>
@@ -153,15 +157,12 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									
-
-
-
 								</div>
 							</div>
 							<div class="clumn">
 								<div class="item">
-									<div class="item__content">
+
+<div class="item__content">
 										<img src="<?php $this->options->themeUrl('img/potfolio/dalian.jpg'); ?>" style="width: 100%;height: auto;" loading="lazy">
 										<div class="line">
 											<span class="text">2019 年 9 月 28 日</span>
@@ -171,8 +172,6 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-
-
 									<div class="item__content">
 										<img src="<?php $this->options->themeUrl('img/potfolio/weihai.jpg'); ?>" style="width: 100%;height: auto;" loading="lazy">
 										<div class="line">
@@ -183,15 +182,13 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									
-
 								</div>
 							</div>
 						</div>
 						<div class="masonary">
 							<div class="clumn">
 								<div class="item">
-									<div class="item__content">
+<div class="item__content">
 										<img src="<?php $this->options->themeUrl('img/potfolio/xinjiang.jpg'); ?>" style="width: 100%;height: auto;" loading="lazy">
 										<div class="line">
 											<span class="text">2020 年 1 月 15 日</span>
@@ -201,7 +198,7 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									<div class="item__content">
+<div class="item__content">
 										<img src="<?php $this->options->themeUrl('img/potfolio/shenzhenxiaoqu.jpg'); ?>" style="width: 100%;height: auto;" loading="lazy">
 										<div class="line">
 											<span class="text">2019 年 8 月 11 日</span>
@@ -211,8 +208,6 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									
-
 								</div>
 							</div>
 							<div class="clumn">
@@ -227,7 +222,7 @@
 										</div>
 										<hr class="pot-hr" />
 									</div>
-									<div class="item__content">
+<div class="item__content">
 										<img src="<?php $this->options->themeUrl('img/potfolio/xiamen.jpg'); ?>" style="width: 100%;height: auto;" loading="lazy">
 										<div class="line">
 											<span class="text">2017 年 8 月</span>
@@ -278,15 +273,15 @@
 
 						<div onclick="copyContent(this);" class="kaomoji-item">(｡･ω･｡)ﾉ♡</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(˘³˘)♡</div>
-						<div onclick="copyContent(this);" class="kaomoji-item">(>ω･* )ﾉ</div>
+						<div onclick="copyContent(this);" class="kaomoji-item">(>ω･* )ﾉ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">( • ̀ω•́ )✧</div>
 
 						<div onclick="copyContent(this);" class="kaomoji-item">(๑＞ڡ＜)☆</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(・ω<) </div> <div onclick="copyContent(this);" class="kaomoji-item">φ(>ω<*)
 								 </div> <div onclick="copyContent(this);" class="kaomoji-item">(*/ω＼*)</div>
-						<div onclick="copyContent(this);" class="kaomoji-item">(*･ω< ) </div> <div onclick="copyContent(this);" class="kaomoji-item">d(´ω｀*)</div>
+						<div onclick="copyContent(this);" class="kaomoji-item">(*･ω< ) </div> <div onclick="copyContent(this);" class="kaomoji-item">d(´ω｀*)</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">ヾ(=･ω･=)o</div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> (=´ω｀=)</div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> (=´ω｀=)</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">=￣ω￣=</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">o(￣▽￣)ｄ </div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(๑╹っ╹๑)</div>
@@ -297,7 +292,7 @@
 						<div onclick="copyContent(this);" class="kaomoji-item">(=ﾟωﾟ)ﾉ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">∠( °ω°)／ </div>
 
-						<div onclick="copyContent(this);" class="kaomoji-item"> щ(｀ω´щ)  </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> щ(｀ω´щ)  </div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(*ﾉωﾉ)</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(灬°ω°灬) </div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(o°ω°o)</div>
@@ -345,7 +340,7 @@
 
 						<div onclick="copyContent(this);" class="kaomoji-item">ψ(｀∇´)ψ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(#｀皿´)</div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> (*｀皿´*)ﾉ </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> (*｀皿´*)ﾉ </div>
 						<div onclick="copyContent(this);" class="kaomoji-item">ヽ(#`Д´)ﾉ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(╯>д<)╯⁽˙³˙⁾</div> <div onclick="copyContent(this);" class="kaomoji-item">(╯°Д°)╯</div>
 
@@ -357,7 +352,7 @@
 						<div onclick="copyContent(this);" class="kaomoji-item">Σ(っ°Д°;)っ</div>
 
 						<div onclick="copyContent(this);" class="kaomoji-item">(꒪Д꒪)ノ</div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> ヽ(。>д<)ｐ</div> <div onclick="copyContent(this);" class="kaomoji-item">(*ﾟﾛﾟ)</div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> ヽ(。>д<)ｐ</div> <div onclick="copyContent(this);" class="kaomoji-item">(*ﾟﾛﾟ)</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">ᓫ(°⌑°)ǃ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">╭(๑´^`๑)╮​</div>
 
@@ -390,7 +385,7 @@
 
 						<div onclick="copyContent(this);" class="kaomoji-item">(Ｔ▽Ｔ)</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">〒▽〒</div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> o(TωT)o </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> o(TωT)o </div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(つД`)</div>
 
 						<div onclick="copyContent(this);" class="kaomoji-item">(ﾉಥ益ಥ)</div>
@@ -459,14 +454,14 @@
 						<div onclick="copyContent(this);" class="kaomoji-item">(´-ι_-｀)</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">~Σ(●—●ﾉ)ﾉ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(づ ●─● )づ</div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> ●△● </div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> ●＿● </div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> ●▽● </div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> ●ω● </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> ●△● </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> ●＿● </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> ●▽● </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> ●ω● </div>
 
-						<div onclick="copyContent(this);" class="kaomoji-item">＿φ( °-°)/ </div>
-						<div onclick="copyContent(this);" class="kaomoji-item">φ(．．)  </div>
-						<div onclick="copyContent(this);" class="kaomoji-item"> ___ψ(‥ )</div>
+						<div onclick="copyContent(this);" class="kaomoji-item">＿φ( °-°)/ </div>
+						<div onclick="copyContent(this);" class="kaomoji-item">φ(．．)  </div>
+						<div onclick="copyContent(this);" class="kaomoji-item"> ___ψ(‥ )</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">φ(°ρ°*)メ</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">ψ(。。)​</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">＿〆(。。)</div>
@@ -511,47 +506,38 @@
 		const cov = $(".cover");
 
 		var nowActive = 1
+		
+		document.onreadystatechange=function () {
+		          if (document.readyState=="complete"){
+		               loading();
+		          }
+		}
+		function loading() {
+		    $('#loading').style.display="none";
+		}
+		
+		
 		window.onload = function() {
-			document.getElementById("_home").style.color = "black"
-			activate(document.getElementById("_home"))
-			autodivheight();
-			var s = nowActive + "_pic"
-			document.getElementById(s).className = "img-cur"
+			document.getElementById("_home").style.color = "black";
+			activate(document.getElementById("_home"));
+			
+			var s = nowActive + "_pic";
+			document.getElementById(s).className = "img-cur";
 
 
 			if ("loading" in HTMLImageElement.prototype) {
 				console.log("支持懒加载");
 
 			} else {
-				console.log("不支持懒加载，你可能需要引入懒加载库来实现懒加载");
+				console.log("不支持懒加载");
 			}
-
-		}
-
-		window.οnresize = autodivheight(); //浏览器窗口发生变化时同时变化DIV高度
-
-		function autodivheight() { //函数：获取尺寸
-			//获取浏览器窗口高度
-			var winHeight = 0;
-			if (window.innerHeight) {
-				winHeight = window.innerHeight;
-			} else if ((document.body) && (document.body.clientHeight)) {
-				winHeight = document.body.clientHeight;
-			}
-			/* 
-						//通过深入Document内部对body进行检测，获取浏览器窗口高度
-						if (document.documentElement && document.documentElement.clientHeight) {
-							winHeight = document.documentElement.clientHeight;
-						} */
-			//DIV高度为浏览器窗口的高度
-			console.log(winHeight);
-			var h = winHeight * 6 / 5 + "px";
+			
 			var h1 = document.getElementById("1_pic").clientHeight + "px";
-			console.log(h + " " + h1);
-
-			document.getElementById("home").style.height = h;
+			console.log( h1);
+			
 			document.getElementsByClassName("slider")[0].style.height = h1;
 			document.getElementsByClassName("slider")[1].style.height = h1;
+
 		}
 
 		function activate(element) {
@@ -589,21 +575,11 @@
 			con.classList.remove("container-click");
 		}
 
-
 		function slide(flag) {
 			var s = nowActive + "_pic"
 			var ele = document.getElementById(s)
 
-			/* ele.style.opacity="0.8"
-			
-			setTimeout(function(){
-				ele.style.display="none"
-			},100);
-			 */
-
 			ele.className = "home-img"
-
-
 
 			if (flag > 0) {
 				nowActive++;
@@ -612,16 +588,7 @@
 				}
 				s = nowActive + "_pic"
 				var elee = document.getElementById(s)
-
 				elee.className = "img-cur"
-
-
-				/* elee.style.display="block"
-				setTimeout(function(){
-					
-					
-					elee.style.opacity=1
-				},100); */
 
 			} else {
 				nowActive--;
@@ -630,12 +597,7 @@
 				}
 				s = nowActive + "_pic"
 				var elee = document.getElementById(s)
-
 				elee.className = "img-cur"
-				/* elee.style.display="block"
-				setTimeout(function(){
-					elee.style.opacity=1
-				},200); */
 			}
 		}
 
@@ -691,14 +653,7 @@
 				cov.classList.remove("invisible");
 				cov.classList.add("visible");
 			}
-
 		}
 	</script>
-
-
-
-
-
-
 
 </html>

@@ -26,7 +26,16 @@ console.log("init");
 			antialias: true
 		});
 		renderer.setPixelRatio(window.devicePixelRatio);
-		renderer.setSize(800 , 640);
+		
+		if(window.innerWidth > 1350){
+			renderer.setSize( 800, 640);
+		}else if(window.innerWidth < 1350){
+			renderer.setSize( 600, 480);
+		}else if(window.innerWidth < 1200){
+			renderer.setSize( 500, 400);
+		}
+		
+		
 		container.appendChild(renderer.domElement);
 
 
@@ -66,4 +75,17 @@ console.log("init");
 		); 
 
 		animate();
+		
+		
+		window.onresize = function () {
+			
+			if(window.innerWidth > 1350){
+				renderer.setSize( 800, 640);
+			}else if(window.innerWidth < 1350){
+				renderer.setSize( 600, 480);
+			}else if(window.innerWidth < 1200){
+				renderer.setSize( 500, 400);
+			}
+		
+		};
 	

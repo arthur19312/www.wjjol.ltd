@@ -90,14 +90,14 @@ body {
 }
 
 .left-slider {
-	left: 10%;
-	width: 35%;
+	left: 0%;
+	width: 30%;
 	background: rgba(255, 255, 255, 0.15);
 }
 
 .right-slider {
-	right: 20%;
-	width: 35%;
+	right: 40%;
+	width: 30%;
 	background: rgba(255, 255, 255, 0.15);
 }
 
@@ -114,10 +114,10 @@ body {
 }
 
 .home-img {
-	width: 70%;
+	width: 60%;
 	position: absolute;
 	top: 0;
-	left: 10%;
+	left: 0%;
 	transition: 0.8s;
 	opacity: 0;
 	visibility: hidden;
@@ -127,10 +127,10 @@ body {
 
 
 .img-cur {
-	width: 70%;
+	width: 60%;
 	position: absolute;
 	top: 0;
-	left: 10%;
+	left: 0%;
 	opacity: 1;
 	transition: 0.8s;
 	visibility: visible;

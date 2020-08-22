@@ -4,7 +4,6 @@ var SCREEN_HEIGHT = window.innerHeight;
 
 
 function animate() {
-	console.log("animate")
 	requestAnimationFrame( animate );
 	
 	camera.rotation.y += 0.007;
@@ -59,7 +58,6 @@ console.log("init");
 			// Here the loaded data is assumed to be an object
 			function(obj) {
 				// Add the loaded object to the scene
-				console.log(obj)
 				scene.add(obj);
 			},
 

@@ -1,23 +1,17 @@
-const $ = ele => typeof ele === "string" ? document.querySelector(ele): "";
+//const $ = ele => typeof ele === "string" ? document.querySelector(ele): "";
 		const con = $(".title-fold");
 		const cov = $(".cover");
 
-		var nowActive = 1
+		var nowActive = 1;
 
-		document.onreadystatechange = function() {
-			if (document.readyState == "complete") {
-				loading();
-			}
-		}
-
-		function loading() {
-			$('#loading').style.display = "none";
-		}
+		$(document).ready(function(){
+			$('#loading').css("display", "none");
+		});
 
 
 		window.onload = function() {
-			document.getElementById("_home").style.color = "black";
-			activate(document.getElementById("_home"));
+			$('#_home').css("color", "black");
+			activate($("#_home"));
 
 			var s = nowActive + "_pic";
 			document.getElementById(s).className = "img-cur";
@@ -40,21 +34,28 @@ const $ = ele => typeof ele === "string" ? document.querySelector(ele): "";
 
 		function activate(element) {
 
-			var a = document.getElementsByClassName("title-item")
+			/* var a = document.getElementsByClassName("title-item")
 			var b = a.length
 			for (var i = 0; i < b; i++) {
 				a[i].querySelector("a").style.color = "#aaa"
-			}
-			element.style.color = "black"
+			} */
+			
+			$(element).parent().siblings().each(function(){
+				$(this).children().css("color", "#aaa");
+			});
+			$(element).css("color", "black");
 
-			var s = element.id.slice(1)
-			var x = document.getElementById(s)
-			var p = x.parentNode.children
+			var s = $(element).attr("id").slice(1);
+			var x = $("#"+s);
+			/* var p = x.parentNode.children
 			var n = p.length
 			for (var i = 0; i < n; i++) {
 				p[i].className = "content-item"
-			}
-			x.className = "content-item-active"
+			} */
+			
+			x.siblings(".content-item-active").removeClass("content-item-active").addClass("content-item");
+				
+			x.removeClass("content-item").addClass("content-item-active");
 		}
 
 		function activateMobile(element) {

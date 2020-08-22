@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="../static/font/iconfont.css">
 	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/response.css">
+	
+	<link rel="stylesheet" type="text/css" href="../assets/waifu.css" />
 	<body ondragstart="return false">
 		<div id="loading">
 			<div class="heart">
@@ -119,6 +121,21 @@
 						<img id="6_pic" src="../static/img/home/6.jpg" class="home-img">
 						<img id="7_pic" src="../static/img/home/7.jpg" class="home-img">
 					</div>
+					<div class="waifu">
+						<div class="waifu-tips"></div>
+						<canvas id="live2d" width="600" height="535" class="live2d"></canvas>
+						<div class="waifu-tool">
+							<span class="fui-home"></span>
+							<span class="fui-chat"></span>
+							<span class="fui-eye"></span>
+							<span class="fui-user"></span>
+							<span class="fui-photo"></span>
+							<span class="fui-info-circle"></span>
+							<span class="fui-cross"></span>
+						</div>
+					</div>
+					
+					
 				</div>
 
 				<div id="potfolio" class="content-item">
@@ -495,10 +512,22 @@
 
 		</div>
 	</body>
+	
+	
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	
 	<script type="text/javascript" src="../js/index.js"></script>
-	<script type="text/javascript" src="../js/three.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/three.js/r83/three.min.js"></script>
+	<!-- <script type="text/javascript" src="../js/three.js"></script> -->
 	<script type="text/javascript" src="../js/3d.js"></script>
-
+	
+	
+	<script src="../assets/waifu-tips.js"></script>
+					<script src="../assets/live2d.js"></script>
+					<script type="text/javascript">
+						initModel("../assets/");
+					</script>
 
 
 

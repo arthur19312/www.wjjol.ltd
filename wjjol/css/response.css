@@ -94,6 +94,10 @@
 		flex-direction: column;
 	}
 	
+	.title-fold {
+		z-index: 20;
+	}
+	
 
 }
 
@@ -131,7 +135,7 @@
 	}
 	
 	.content{
-		padding-top: 1rem;
+		padding-top: 3rem;
 	}
 	
 	.git-str{

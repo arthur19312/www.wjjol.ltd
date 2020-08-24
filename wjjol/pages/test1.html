@@ -1,111 +1,230 @@
-<!doctype html>
-<html>
 
+<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <title>焦点图</title>
-</head>
+<meta charset="UTF-8">
+<title>Three.js JSON Loader Demo</title>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript">
 
-<style type="text/css">
-    .a, .b, .c {
-        box-sizing: border-box;
-        border: 1px solid;
+/* Uses JSONLoader to load objects that have been saved
+ * in three.js's json format.  Requires the folder models-json
+ * that contains the seven sample models.
+ */
+
+var renderer;  // A three.js WebGL or Canvas renderer.
+var scene;     // The 3D scene that will be rendered, containing the model.
+var camera;    // The camera that takes the picture of the scene.
+
+var model; // The three.js object that represents the model.
+
+var rotateX = 0;   // rotation of model about the x-axis
+var rotateY = 0;  // rotation of model about the y-axis
+
+
+/*  This function is called by the init() method.  It simply adds
+ *  a light to the scene.  Objects are added later by the loader callback.
+ */
+function createWorld() {
+    var light;  // A light shining from the direction of the camera.
+    light = new THREE.DirectionalLight();
+    light.position.set(0,0,1);
+    scene.add(light);
+}
+
+/**
+ * The callback function that is called by the JSONLoader when it
+ * has finished loading the object.  This function creates a three.js
+ * function to hold the object.  It translates the object so that
+ * its center is in the origin.  It wraps the object in another object
+ * that is used to scale and rotate the object.  The scale is set
+ * so that the maximum coordinate in its vertices, in absolute
+ * value, is scaled to 10.  The rotation is controlled by the arrow
+ * keys.
+ */ 
+function modelLoadedCallback(geometry, materials) {
+
+    /* create the object from the geometry and materials that were loaded.  There
+       can be multiple materials, which can be applied to the object using MeshFaceMaterials.
+       Note tha the material can include references to texture images might finish
+       loading later. */
+       
+    var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+
+    /* Determine the ranges of x, y, and z in the vertices of the geometry. */
+
+    var xmin = Infinity;
+    var xmax = -Infinity;
+    var ymin = Infinity;
+    var ymax = -Infinity;
+    var zmin = Infinity;
+    var zmax = -Infinity;
+    for (var i = 0; i < geometry.vertices.length; i++) {
+        var v = geometry.vertices[i];
+        if (v.x < xmin)
+            xmin = v.x;
+        else if (v.x > xmax)
+            xmax = v.x;
+        if (v.y < ymin)
+            ymin = v.y;
+        else if (v.y > ymax)
+            ymax = v.y;
+        if (v.z < zmin)
+            zmin = v.z;
+        else if (v.z > zmax)
+            zmax = v.z;
     }
-    .wrap {
-        width: 250px;
-    }
-    .a {
-        width: 100px;
-        height: 100px;
-        float: left;
-    }
-    .b {
-        width: 100px;
-        height: 50px;
-        float: left;
-    }
-    .c {
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-    }
-</style>
-
-<body>
-
-<span style="color: rgb(51,51,51);"> </span>
-<span style="color: rgb(51,51,51);"> </span>
-<div class="wrap">
-    <div class="a">a</div>
-    <div class="b">b</div>
-    <div class="c">c</div>
-</div> 
-
-
-<div>
-	<strong style="width:80px;height:50px">dsadas</strong>
-</div>
-</body>
-
-<script>
     
-/*
-autodivheight();
-function autodivheight(){ //函数：获取尺寸
-//获取浏览器窗口高度
-var winHeight=0;
-if (window.innerHeight){
-winHeight = window.innerHeight;
-}else if ((document.body) && (document.body.clientHeight)){
-winHeight = document.body.clientHeight;
+    /* translate the center of the object to the origin */
+    var centerX = (xmin+xmax)/2;
+    var centerY = (ymin+ymax)/2; 
+    var centerZ = (zmin+zmax)/2;
+    var max = Math.max(centerX - xmin, xmax - centerX);
+    max = Math.max(max, Math.max(centerY - ymin, ymax - centerY) );
+    max = Math.max(max, Math.max(centerZ - zmin, zmax - centerZ) );
+    var scale = 10/max;
+    object.position.set( -centerX, -centerY, -centerZ );
+    console.log("Loading finished, scaling object by " + scale);
+    console.log("Center at ( " + centerX + ", " + centerY + ", " + centerZ + " )");
+    
+    /* Create the wrapper, model, to scale and rotate the object. */
+    
+    model = new THREE.Object3D();
+    model.add(object);
+    model.scale.set(scale,scale,scale);
+    rotateX = rotateY = 0;
+    scene.add(model);
+    render();
+
 }
 
-//通过深入Document内部对body进行检测，获取浏览器窗口高度
-if (document.documentElement && document.documentElement.clientHeight){
-winHeight = document.documentElement.clientHeight;
+
+/**
+ * Called when the setting of the model-selection radio buttons is changed.
+ * starts loading the model from the specified file and sets the background
+ * color for the renderer (since black background doesn't work for all
+ * of the models.
+ */
+function installModel(file, bgColor) { 
+    if (model) {
+        scene.remove(model);
+    }
+    renderer.setClearColor(bgColor);
+    render();
+    var loader = new THREE.JSONLoader();
+    loader.load("models-json/" + file, modelLoadedCallback);
 }
-//DIV高度为浏览器窗口的高度
-//document.getElementById("test").style.height= winHeight +"px";
-//DIV高度为浏览器窗口高度的一半
-document.getElementsByClassName("content").style.height= winHeight/2 +"px";
+
+
+
+/**
+ *  The render fucntion creates an image of the scene from the point of view
+ *  of the camera and displays it in the canvas.  This is called at the end of
+ *  init() to produce the initial view of the model, and it is called each time
+ *  the user presses an arrow key, return, or home.
+ */
+function render() {
+    renderer.render(scene, camera);
 }
 
-
-window.οnresize=autodivheight; //浏览器窗口发生变化时同时变化DIV高度
-
-*/
-
-
-/* let n = readline();
-let arr = readline().split(/\s+/); */
-let n = 10;
-let arr = "53941 38641 31525 75864 29026 12199 83522 58200 64784 80987".split(/\s+/);
-let n1 = n-1;
-
-			console.log(arr);
-for(let i=0;i<n1;i++){
-	let tmp = arr[i];
-	for(let j=i+1;j<n;j++){
-		let cur = arr[j];
-		if((cur < tmp) && ((cur-tmp)%2 !=0)){
-			console.log(cur +" "+ tmp);
-			arr[j] = tmp;
-			arr[i] = cur;
-			
-			tmp = cur;
-			
-			console.log(arr);
-		}
+/**
+ *  An event listener for the keydown event.  It is installed by the init() function.
+ */
+function doKey(evt) { 
+    var rotationChanged = true;
+	switch (evt.keyCode) {
+	    case 37: rotateY -= 0.05; break;        // left arrow
+	    case 39: rotateY +=  0.05; break;       // right arrow
+	    case 38: rotateX -= 0.05; break;        // up arrow
+	    case 40: rotateX += 0.05; break;        // down arrow
+	    case 13: rotateX = rotateY = 0; break;  // return
+	    case 36: rotateX = rotateY = 0; break;  // home
+	    default: rotationChanged = false;
+	}
+	if (model && rotationChanged) {
+       model.rotation.set(rotateX,rotateY,0);	
+       render();
+	   evt.preventDefault();
 	}
 }
 
-//print(arr.join(" "));
-console.log(arr);
-
-
-
+/**
+ *  This function is called by the onload event so it will run after the
+ *  page has loaded.  It creates the renderer, canvas, and scene objects,
+ *  calls createWorld() to add objects to the scene, and renders the
+ *  initial view of the scene.  If an error occurs, it is reported.
+ */
+function init() {
+    try {
+        var theCanvas = document.getElementById("cnvs");
+        if (!theCanvas || !theCanvas.getContext) {
+            document.getElementById("message").innerHTML = 
+                             "Sorry, your browser doesn't support canvas graphics.";
+            return;
+        }
+        try {  // try to create a WebGLRenderer
+            if (window.WebGLRenderingContext) {
+                renderer = new THREE.WebGLRenderer( { 
+                   canvas: theCanvas, 
+                   antialias: true
+                } );
+            } 
+        }
+        catch (e) {
+        }
+        if (!renderer) { // If the WebGLRenderer couldn't be created, try a CanvasRenderer.
+            renderer = new THREE.CanvasRenderer( { canvas: theCanvas } );
+            renderer.setSize(theCanvas.width,theCanvas.height);
+            document.getElementById("message").innerHTML =
+                          "WebGL not available; falling back to CanvasRenderer.";
+        }
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(50, theCanvas.width/theCanvas.height, 0.1, 100);
+        camera.position.z = 30;
+        createWorld();
+        installModel("arrowhead.js");
+        render();
+        document.addEventListener("keydown", doKey, false);
+        document.getElementById("r1").checked = true;
+     }
+     catch (e) {
+        document.getElementById("message").innerHTML = "Sorry, an error occurred: " + e;
+     }
+}
 
 </script>
+</head>
+<body onload="init()" bgcolor="#CCC">
 
+<h2>Three.js JSON Loader Demo</h2>
 
+<noscript>
+<p style="color: #A00; font-weight: bold">Sorry, but this page requires JavaScript!</p>
+</noscript>
+
+<p style="color:#A00; font-weight: bold" id="message"></p>
+
+<p><b>Arrow keys rotate the model about its x- and y-axes.<br>
+Return key or HOME key sets both rotations to zero.</b></p>
+
+<div style="float:left">
+   <canvas width=600 height=600 id="cnvs" style="background-color:black"></canvas>
+   <p>Except for the first two, the models are from the three.js download.</p> 
+</div>
+
+<div style="float:left; margin-left:2cm">
+
+<p style="text-indent: -1cm"><b>JSON models:</b><br>
+<input type="radio" name="model" id="r1" onchange="installModel('arrowhead.js',0)"> <label for="r1">arrowhead.js</label><br>
+<input type="radio" name="model" id="r7" onchange="installModel('multi-material.js',0xccccff)"> <label for="r7">multi-material.js</label><br>
+<input type="radio" name="model" id="r2" onchange="installModel('tree.js',0)"> <label for="r2">tree.js</label><br>
+<input type="radio" name="model" id="r3" onchange="installModel('terrain.js',0)"> <label for="r3">terrain.js</label><br>
+<input type="radio" name="model" id="r4" onchange="installModel('horse.js',0)"> <label for="r4">horse.js</label><br>
+<input type="radio" name="model" id="r5" onchange="installModel('stork.js',0)"> <label for="r5">stork.js</label><br>
+<input type="radio" name="model" id="r6" onchange="installModel('monster.js',0xddffdd)"> <label for="r6">monster.js</label><br>
+(use arrow keys to<br>
+see monster texture)<br>
+</p>
+</div>
+
+</body>
 </html>

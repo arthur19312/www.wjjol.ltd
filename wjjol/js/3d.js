@@ -39,7 +39,7 @@ clearModel();
 
 	loader.load(
 		// resource URL
-		"../static/scene/scene1.json",
+		"static/scene/scene1.json",
 		// onLoad callback
 		// Here the loaded data is assumed to be an object
 		function(obj) {
@@ -105,7 +105,7 @@ scene = new THREE.Scene();
 
 	loader.load(
 		// resource URL
-		"../static/scene/scene2.json",
+		"static/scene/scene2.json",
 		// onLoad callback
 		// Here the loaded data is assumed to be an object
 		function(obj) {

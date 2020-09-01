@@ -1,6 +1,8 @@
 var SCREEN_WIDTH = window.innerWidth;
 var SCREEN_HEIGHT = window.innerHeight;
 
+var index = 1;
+
 
 
 var container = document.getElementById("canvasContainer");
@@ -21,8 +23,26 @@ if (window.innerWidth > 1350) {
 	renderer.setSize(500, 400);
 }
 
+renderer.domElement.id = "canv";
 
-container.appendChild(renderer.domElement);
+let a = document.createElement("a");
+function CanvSrc(i){
+	switch(i){
+		case 1:{
+			return "https://github.com/arthur19312/interact";
+		}
+		case 2:{
+			return "https://github.com/arthur19312/Crystal";
+		}
+	}
+};
+a.setAttribute("href",CanvSrc(index));
+a.setAttribute("target","_blank");
+
+a.appendChild(renderer.domElement)
+
+
+container.appendChild(a);
 
 var scene,	model, camera;
 var loader = new THREE.ObjectLoader();
@@ -33,6 +53,7 @@ display1();
 
 function display1() {
 clearModel();
+	index = 1;
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera(50, 1.25, 0.01, 1000);
 	camera.position.z = 200;
@@ -83,6 +104,7 @@ function animate1() {
 function display2() {
 
 clearModel();
+index = 2;
 scene = new THREE.Scene();
 	scene.fog = new THREE.Fog("rgb(225,255,254)", 500, 3000);
 	scene.cache = false;

@@ -25,7 +25,7 @@ live2d_settings['tipsMessage']          = 'waifu-tips.json';            // 同�
 live2d_settings['hitokotoAPI']          = 'lwl12.com';                  // 一言 API，可选 'lwl12.com', 'hitokoto.cn', 'jinrishici.com'(古诗词)
 
 // 默认模型
-live2d_settings['modelId']              = 1;            // 默认模型 ID，可在 F12 控制台找到
+live2d_settings['modelId']              = 7;            // 默认模型 ID，可在 F12 控制台找到
 live2d_settings['modelTexturesId']      = 53;           // 默认材质 ID，可在 F12 控制台找到
 
 // 工具栏设置
@@ -52,7 +52,7 @@ live2d_settings['showCopyMessage']      = true;         // 显示 复制内容 �
 live2d_settings['showWelcomeMessage']   = true;         // 显示进入面页欢迎词
 
 //看板娘样式设置
-live2d_settings['waifuSize']            = '600x535';    // 看板娘大小，例如 '280x250', '600x535'
+live2d_settings['waifuSize']            = '560x500';    // 看板娘大小，例如 '280x250', '600x535'
 live2d_settings['waifuTipsSize']        = '250x70';     // 提示框大小，例如 '250x70', '570x150'
 live2d_settings['waifuFontSize']        = '14px';       // 提示框字体，例如 '12px', '30px'
 live2d_settings['waifuToolFont']        = '16px';       // 工具栏字体，例如 '14px', '36px'

@@ -1,5 +1,5 @@
 //const $ = ele => typeof ele === "string" ? document.querySelector(ele): "";
-		const con = $(".title-fold");
+		const con = $("#title-fold");
 		const cov = $(".cover");
 
 		var nowActive = 1;
@@ -34,12 +34,6 @@
 
 		function activate(element) {
 
-			/* var a = document.getElementsByClassName("title-item")
-			var b = a.length
-			for (var i = 0; i < b; i++) {
-				a[i].querySelector("a").style.color = "#aaa"
-			} */
-			
 			$(element).parent().siblings().each(function(){
 				$(this).children().css("color", "#aaa");
 			});
@@ -47,11 +41,6 @@
 
 			var s = $(element).attr("id").slice(1);
 			var x = $("#"+s);
-			/* var p = x.parentNode.children
-			var n = p.length
-			for (var i = 0; i < n; i++) {
-				p[i].className = "content-item"
-			} */
 			
 			x.siblings(".content-item-active").removeClass("content-item-active").addClass("content-item");
 				
@@ -60,18 +49,16 @@
 
 		function activateMobile(element) {
 
-			var s = element.id.slice(1)
-			var x = document.getElementById(s)
-			var p = x.parentNode.children
-			var n = p.length
-			for (var i = 0; i < n; i++) {
-				p[i].className = "content-item"
-			}
-			x.className = "content-item-active"
-
-			cov.classList.remove("visible");
-			cov.classList.add("invisible");
-			con.classList.remove("container-click");
+			
+			var s = $(element).attr("id").slice(2);
+			var x = $("#"+s);
+			
+			x.siblings(".content-item-active").removeClass("content-item-active").addClass("content-item");
+				
+			x.removeClass("content-item").addClass("content-item-active");
+			
+			cov.addClass("invisible");
+			con.removeClass("container-click");
 		}
 
 		function slide(flag) {
@@ -131,25 +118,14 @@
 		}
 
 
-		con.onmouseenter = () => con.classList.add("container-hover");
-		con.onmouseleave = () => con.classList.remove("container-hover");
+		con.hover(
+			function(){con.addClass("container-hover")},
+			function(){con.removeClass("container-hover")}
+		);
+		
+		con.click(function(){
+			con.toggleClass("container-click");
+			cov.toggleClass("invisible");
+		})
 
-		con.onclick = () => {
-
-			if (con.classList.contains("container-click")) {
-				con.classList.remove("container-click");
-			} else {
-				con.classList.remove("container-hover");
-				con.classList.add("container-click");
-			}
-
-			if (cov.classList.contains("visible")) {
-				cov.classList.remove("visible");
-				cov.classList.add("invisible");
-			} else {
-				$(".title-fold").style.zIndex = "11";
-				cov.style.zIndex = "10";
-				cov.classList.remove("invisible");
-				cov.classList.add("visible");
-			}
-		}
+		

@@ -130,14 +130,14 @@ function initModel(waifuPath, type) {
     live2d_settings.waifuTipsSize = live2d_settings.waifuTipsSize.split('x');
     live2d_settings.waifuEdgeSide = live2d_settings.waifuEdgeSide.split(':');
     
-    $("#live2d").attr("width",live2d_settings.waifuSize[0]);
-    $("#live2d").attr("height",live2d_settings.waifuSize[1]);
-    $(".waifu-tips").width(live2d_settings.waifuTipsSize[0]);
-    $(".waifu-tips").height(live2d_settings.waifuTipsSize[1]);
+    $("#live2d").attr("width",window.innerWidth > 2000?840:live2d_settings.waifuSize[0]);
+    $("#live2d").attr("height",window.innerWidth > 2000?750:live2d_settings.waifuSize[1]);
+    $(".waifu-tips").width(window.innerWidth > 2000?300:live2d_settings.waifuTipsSize[0]);
+    $(".waifu-tips").height(window.innerWidth > 2000?100:live2d_settings.waifuTipsSize[1]);
     $(".waifu-tips").css("top",live2d_settings.waifuToolTop);
-    $(".waifu-tips").css("font-size",live2d_settings.waifuFontSize);
-    $(".waifu-tool").css("font-size",live2d_settings.waifuToolFont);
-    $(".waifu-tool span").css("line-height",live2d_settings.waifuToolLine);
+    $(".waifu-tips").css("font-size",window.innerWidth > 2000?21:live2d_settings.waifuFontSize);
+    $(".waifu-tool").css("font-size",window.innerWidth > 2000?20:live2d_settings.waifuToolFont);
+    $(".waifu-tool span").css("line-height",window.innerWidth > 2000?1.5:live2d_settings.waifuToolLine);
     
     if (live2d_settings.waifuEdgeSide[0] == 'left') $(".waifu").css("left",live2d_settings.waifuEdgeSide[1]+'px');
     else if (live2d_settings.waifuEdgeSide[0] == 'right') $(".waifu").css("right",live2d_settings.waifuEdgeSide[1]+'px');

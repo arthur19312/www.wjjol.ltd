@@ -93,12 +93,14 @@ body {
 	left: 0%;
 	width: 30%;
 	background: rgba(255, 255, 255, 0.15);
+	border-radius: 1.875rem 0 0 1.875rem;
 }
 
 .right-slider {
 	right: 40%;
 	width: 30%;
 	background: rgba(255, 255, 255, 0.15);
+	border-radius: 0  1.875rem 1.875rem 0;
 }
 
 .content-item {

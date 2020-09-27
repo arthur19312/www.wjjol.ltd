@@ -113,12 +113,17 @@ body {
 	position: relative;
 }
 
-.home-img {
+.home-img, .img-cur{
 	width: 60%;
 	position: absolute;
 	top: 0;
 	left: 0%;
 	transition: 0.8s;
+	border-radius: 1.875rem;
+	box-shadow: 10px 10px 30px lightgray;
+}
+
+.home-img {
 	opacity: 0;
 	visibility: hidden;
 	z-index: 0;
@@ -127,12 +132,7 @@ body {
 
 
 .img-cur {
-	width: 60%;
-	position: absolute;
-	top: 0;
-	left: 0%;
 	opacity: 1;
-	transition: 0.8s;
 	visibility: visible;
 	z-index: 2;
 }

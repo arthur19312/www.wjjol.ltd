@@ -519,7 +519,25 @@
 				
 				</div>
 				<div id="contact" class="content-item">
-					contact
+					<!-- <div>
+						邮箱 Email：
+						<input class="contact-input" type="email" id="contact-email" />
+					</div> -->
+					<div>
+						<span class="contact-text">标题 Title：</span>
+						<div>
+							<input class="contact-input" type="text" id="contact-title" />
+						</div>
+					</div> 
+					<div>
+						<span class="contact-text">内容 Content：</span>
+						<div>
+							<input class="contact-input" type="text" id="contact-content" />
+						</div>
+					</div>
+					<a href="mailto:blodcell@163.com?subject=这是邮件的主题&body=这是邮件的内容" class="contact-send" onclick="sendEmail(this)" >
+						发送邮件
+					</a>
 				</div>
 			</div>
 

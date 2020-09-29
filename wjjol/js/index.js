@@ -127,5 +127,15 @@
 			con.toggleClass("container-click");
 			cov.toggleClass("invisible");
 		})
+		
+		
+		function sendEmail(ele){
+			//let email = $("#contact-email").val()
+			let title = $("#contact-title").val()
+			let content = $("#contact-content").val()
+			
+			$(ele).attr("href","mailto:blodcell@163.com?subject="+title+"&body="+content)
+			
+		}
 
 		

@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2552342",
+      "name": "订单-短信",
+      "font_class": "message",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "12687165",
+      "name": "发送",
+      "font_class": "send",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
       "icon_id": "1511324",
       "name": "邮件",
       "font_class": "contact",

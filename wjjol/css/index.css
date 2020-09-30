@@ -443,9 +443,56 @@ body {
 	}
 }
 
+.contact-text{
+	margin: 1rem 0;
+		font-size: 1.2rem;
+}
+
+.contact-input{
+	padding: 0.6rem 0.6rem;
+	font-size: 1rem;
+	border: 2px lightblue solid;
+}
+.contact-input:focus{
+	
+	outline: 2px lightblue solid;
+	box-shadow: 0 0 0 2px lightblue;
+}
+
+.contact-input:hover{
+	border-color: lightblue;
+	box-shadow: 0 0 2px 2px lightblue;
+}
 
 
 
+.contact-send{
+	font-size: 1.2rem;
+	display: inline-block;
+	margin-top: 2.5rem;
+	outline: none;
+	text-decoration: none;
+	padding: 0.5rem 0.7rem;
+	color: #000000;
+	border: 2px lightblue solid;
+	
+}
+
+.contact-send:hover{
+	box-shadow: 0 0 2px 2px lightblue;
+	background-color: lightblue;
+}
+
+
+#contact{
+	font-family: "微软雅黑";
+	
+	line-height: 2rem;
+}
+
+#contact .contact-input{
+	font-family: "微软雅黑";
+}
 
 
 

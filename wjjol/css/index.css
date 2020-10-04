@@ -449,6 +449,7 @@ body {
 }
 
 .contact-input{
+	color: #666;
 	padding: 0.6rem 0.6rem;
 	font-size: 1rem;
 	border: 2px #e2e2e2 solid;

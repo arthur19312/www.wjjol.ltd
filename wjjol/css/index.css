@@ -451,36 +451,48 @@ body {
 .contact-input{
 	padding: 0.6rem 0.6rem;
 	font-size: 1rem;
-	border: 2px lightblue solid;
+	border: 2px #e2e2e2 solid;
+	resize: vertical;
+	outline: none;
 }
-.contact-input:focus{
-	
-	outline: 2px lightblue solid;
-	box-shadow: 0 0 0 2px lightblue;
-}
-
 .contact-input:hover{
-	border-color: lightblue;
-	box-shadow: 0 0 2px 2px lightblue;
+	border-color: #ccc;
+}
+
+.contact-input:focus{
+	border-color: skyblue;
+	
 }
 
 
 
-.contact-send{
-	font-size: 1.2rem;
+.contact-send-button{
+	font-size: 1rem;
+	color: white;
 	display: inline-block;
 	margin-top: 2.5rem;
 	outline: none;
 	text-decoration: none;
-	padding: 0.5rem 0.7rem;
+	padding: 0.5rem 2.7rem;
 	color: #000000;
-	border: 2px lightblue solid;
+	border: 0;
+	border-radius: 2rem;
+	background-color: lightblue;
 	
 }
 
-.contact-send:hover{
-	box-shadow: 0 0 2px 2px lightblue;
-	background-color: lightblue;
+.contact-send-button:hover{
+	
+	background-color: skyblue;
+}
+
+
+.contact-send-link{
+	text-decoration: none;color: skyblue;padding: 0.2rem;font-size: 1.1rem;
+}
+
+.contact-send-link:hover{
+	color: deepskyblue;
 }
 
 

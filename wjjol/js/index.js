@@ -6,6 +6,7 @@
 
 		$(document).ready(function(){
 			$('#loading').css("display", "none");
+			
 		});
 
 
@@ -29,7 +30,8 @@
 
 			document.getElementsByClassName("slider")[0].style.height = h1;
 			document.getElementsByClassName("slider")[1].style.height = h1;
-
+			
+			
 		}
 
 		function activate(element) {
@@ -128,11 +130,14 @@
 			cov.toggleClass("invisible");
 		})
 		
-		
 		function sendEmail(ele){
-			//let email = $("#contact-email").val()
-			let title = $("#contact-title").val()
-			let content = $("#contact-content").val()
+			//let email = $("#contact-email").val()encodeURI
+			let title = encodeURI($("#contact-title").val())
+			let content = encodeURI($("#contact-content").val())
+			
+			
+			
+			console.log(content)
 			
 			$(ele).attr("href","mailto:blodcell@163.com?subject="+title+"&body="+content)
 			

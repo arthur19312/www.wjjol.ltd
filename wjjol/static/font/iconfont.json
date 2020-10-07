@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1071024",
+      "name": "表情1",
+      "font_class": "emoji-off",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "1071069",
+      "name": "表情2",
+      "font_class": "emoji-on",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
       "icon_id": "2552342",
       "name": "订单-短信",
       "font_class": "message",

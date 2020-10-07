@@ -92,6 +92,7 @@
 		function copyContent(ElementObj) {
 			//获取点击的值
 			var clickContent = ElementObj.innerText;
+			
 			//获取要赋值的input的元素
 			var inputElement = document.getElementById("copy_content");
 			//给input框赋值
@@ -143,4 +144,15 @@
 			
 		}
 
-		
+
+	function copyContentParent(ev){
+		console.log("ent")
+		ev = ev || window.event;
+		let tg = ev.target || ev.srcElement
+		let txt = tg.innerText
+		if(txt.length === 2){
+			let tmp = $("#contact-content").val()
+			$("#contact-content").val(tmp+txt)
+		}
+	}
+	

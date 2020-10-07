@@ -1,15 +1,6 @@
 
+
 @media only screen and (max-width: 1350px) {
-	.github-link, .git-str{
-		display: none;
-	}
-	.git-img{
-		width: 100%;
-	}
-}
-
-
-@media only screen and (max-width: 1200px) {
 	.clumn {
 		width: 90%;
 		margin-left: 1rem;
@@ -23,7 +14,7 @@
 	
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) { 
 	
 	.clumn {
 		margin-left: 0;
@@ -45,15 +36,16 @@
 	}
 	
 	.container{
-		position: fixed;
+		position: relative;
 		z-index: 8;
 		top: 4rem;
-		
+		margin: 0;
 	}
 	
 	
 	
 	.content {
+		padding-top: 0;
 		padding-left:3rem;
 		text-align: left;
 		position: relative;

@@ -527,6 +527,10 @@ body {
 	font-size: 2rem;line-height: 4rem;
 }
 
+#emojiSwitch{
+	margin-left: 1rem;color: rgb(255,200,61);cursor: pointer;
+}
+
 
 
 

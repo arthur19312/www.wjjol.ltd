@@ -489,6 +489,21 @@
 					<p>窝在沙发上看《逆转裁判》第二季</p>
 					<p>阿 鱼肉真好吃 太好吃了 完全停不下来</p>
 					<p>剁手了羽毛球拍和配件 尝试省掉按摩仪的钱</p>
+					
+					<div class="waifu">
+						<div class="waifu-tips"></div>
+						<canvas id="live2d" width="600" height="535" class="live2d"></canvas>
+						<div class="waifu-tool"><span class="fui-home"></span>
+							<span class="fui-chat"></span>
+							<span class="fui-eye"></span>
+							<span class="fui-user"></span>
+							<span class="fui-photo"></span>
+							<span class="fui-info-circle"></span>
+							<span class="fui-cross"></span>
+					
+						</div>
+					</div>
+					
 
 				</div>
 				<div id="contact" class="content-item">
@@ -506,6 +521,7 @@
 							</a>
 						</p>
 						<p>也可以写在下面喔 (ﾟωﾟ)ﾉ☆<span class="iconfont icon-emoji-off" id="emojiSwitch"></span></p>
+						
 						<div>
 							<p class="contact-text">标题 Title：</p>
 							<div><input class="contact-input" style="width: 24rem;" type="text" id="contact-title" />
@@ -516,24 +532,7 @@
 							<div><textarea rows="10" style="width: 24rem;min-height: 6rem;" class="contact-input" id="contact-content"></textarea>
 							</div>
 						</div>
-						<a href="mailto:blodcell@163.com?subject=这是邮件的主题&body=这是邮件的内容" class="contact-send-button" onclick="sendEmail(this)">
-							发送邮件
-						</a>
-
-						<div class="waifu">
-							<div class="waifu-tips"></div>
-							<canvas id="live2d" width="600" height="535" class="live2d"></canvas>
-							<div class="waifu-tool"><span class="fui-home"></span>
-								<span class="fui-chat"></span>
-								<span class="fui-eye"></span>
-								<span class="fui-user"></span>
-								<span class="fui-photo"></span>
-								<span class="fui-info-circle"></span>
-								<span class="fui-cross"></span>
-
-							</div>
-						</div>
-
+						
 						<div class="emoji" id="emojiBoard">
 							<p onclick="copyContentParent()">
 								<span>😀</span>
@@ -597,6 +596,12 @@
 								<span>🙂</span>
 								<span>🙏</span></p>
 						</div>
+						<a href="mailto:blodcell@163.com?subject=这是邮件的主题&body=这是邮件的内容" class="contact-send-button" onclick="sendEmail(this)">
+							发送邮件
+						</a>
+
+						
+						
 						
 
 				</div>

@@ -520,12 +520,9 @@ body {
 	left: 40rem;
 	border: 2px solid black;
 	border-radius: 2rem;
-	
-}
-
-.emoji p{
 	font-size: 2rem;line-height: 4rem;
 }
+
 
 .emoji p span{
 	cursor: pointer;

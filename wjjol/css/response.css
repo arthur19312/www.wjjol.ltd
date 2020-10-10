@@ -38,7 +38,7 @@
 	.container{
 		position: relative;
 		z-index: 8;
-		top: 4rem;
+		top: 2rem;
 		margin: 0;
 	}
 	
@@ -55,6 +55,28 @@
 		z-index: 5;
 		padding-top: 6rem;
 	}
+	
+	
+	.emoji{
+		position: relative;
+		    padding: 0;
+		    width: 27rem;
+		    box-shadow: none;
+		    opacity: 1;
+		    border: 0;
+			left: 0;
+			margin-bottom: -2rem;
+	}
+	
+	.emoji p{
+		font-size: 1.5rem;line-height: 3rem;letter-spacing: 3px;
+	}
+	
+	.contact-send-button{
+		margin-top: 2rem;
+	}
+	
+	
 	
 	
 	

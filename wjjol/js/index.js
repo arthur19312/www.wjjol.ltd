@@ -146,7 +146,6 @@ function sendEmail(ele) {
 
 
 function copyContentParent(ev) {
-	console.log("ent")
 	ev = ev || window.event;
 	let tg = ev.target || ev.srcElement
 	let txt = tg.innerText
@@ -157,14 +156,42 @@ function copyContentParent(ev) {
 }
 
 let emojiSwitch = $("#emojiSwitch"),
-	emojiBoard = $("#emojiBoard")
+	emojiBoard = $("#emojiBoard"),
+	emojiActive = false
+
+$('body').click((event)=>{
+	if(!(($.contains(emojiBoard[0],event.target)) || ($.contains(emojiSwitch[0],event.target)))){
+		emojiBoard.hide()
+		if(emojiActive){
+			emojiActive = !emojiActive
+			console.log(emojiActive)
+		emojiSwitch.toggleClass("icon-emoji-off icon-emoji-on")
+		}
+	}
+})
 
 emojiBoard.hide()
 
 emojiSwitch.hover(
-	() => {
+()=>{
+	emojiSwitch.css("color","rgb(255,200,61)")
+}
+)
+
+emojiSwitch.click(
+	()=>{
+		event.stopPropagation()
+		emojiActive = !emojiActive
+		console.log(emojiActive)
 		emojiSwitch.toggleClass("icon-emoji-off icon-emoji-on")
-		emojiBoard.toggle()
+		setTimeout(()=>{emojiBoard.toggle()},100)
 	}
 
 )
+
+emojiBoard.hover(
+()=>{
+		emojiBoard.show()
+	}
+)
+

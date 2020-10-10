@@ -527,8 +527,12 @@ body {
 	font-size: 2rem;line-height: 4rem;
 }
 
+.emoji p span{
+	cursor: pointer;
+}
+
 #emojiSwitch{
-	margin-left: 1rem;color: rgb(255,200,61);cursor: pointer;
+	padding: 1.5rem;color: rgb(200,200,200);cursor: pointer;
 }
 
 

@@ -13,6 +13,8 @@ body {
 
 }
 
+
+
 .iconfont {
 	font-size: 1.8rem;
 	margin-right: 0.8rem;
@@ -463,6 +465,11 @@ body {
 .contact-input:focus{
 	border-color: skyblue;
 	
+}
+
+.contact-input::selection{
+	color: white;
+	background-color: rgb(120,160,190)
 }
 
 

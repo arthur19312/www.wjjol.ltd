@@ -71,7 +71,7 @@ function slide(flag) {
 
 	if (flag > 0) {
 		nowActive++;
-		if (nowActive == 8) {
+		if (nowActive == 9) {
 			nowActive = 1
 		}
 		s = nowActive + "_pic"
@@ -81,7 +81,7 @@ function slide(flag) {
 	} else {
 		nowActive--;
 		if (nowActive == 0) {
-			nowActive = 7
+			nowActive = 8
 		}
 		s = nowActive + "_pic"
 		var elee = document.getElementById(s)

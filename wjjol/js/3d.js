@@ -151,7 +151,7 @@ function display2() {
 
 		loader.load(
 			// resource URL
-			"static/scene/scene.json",
+			"static/scene/scene2.json",
 			// onLoad callback
 			// Here the loaded data is assumed to be an object
 			function(obj) {
@@ -174,12 +174,13 @@ function display2() {
 		var renderPass = new THREE.RenderPass(scene, camera);
 		
 		const params = {
-			exposure: 0.2,
-			bloomStrength: 0.6,
+			//exposure: 0.2,
+			bloomStrength: 0.7,
 			bloomThreshold: 0.2,
 			bloomRadius: 0.2
 		};
 		
+		//strength radius threshold
 		const bloomPass = new THREE.UnrealBloomPass(new THREE.Vector2(canvasSizeX, canvasSizeY), 1.5, 0.4, 0.85);
 		bloomPass.threshold = params.bloomThreshold;
 		bloomPass.strength = params.bloomStrength;

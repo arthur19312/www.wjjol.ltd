@@ -186,9 +186,13 @@ function display2() {
 		bloomPass.strength = params.bloomStrength;
 		bloomPass.radius = params.bloomRadius;
 		
+		const afterimagePass = new THREE.AfterimagePass(0.9);
+		
 		composer = new THREE.EffectComposer(renderer);
 		composer.addPass(renderPass);
 		composer.addPass(bloomPass);
+		composer.addPass(afterimagePass);
+		
 		
 		
 

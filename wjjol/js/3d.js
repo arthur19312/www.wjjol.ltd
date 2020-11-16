@@ -96,6 +96,7 @@ function display1() {
 				console.error('An error happened' + err);
 			}
 		);
+		
 		animate1();
 	}
 

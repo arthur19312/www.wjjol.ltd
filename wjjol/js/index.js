@@ -4,13 +4,12 @@ const cov = $(".cover");
 
 var nowActive = 1;
 
-$(document).ready(function() {
-	$('#loading').css("display", "none");
 
-});
 
 
 window.onload = function() {
+	
+	
 	$('#_home').css("color", "black");
 	activate($("#_home"));
 
@@ -32,6 +31,9 @@ window.onload = function() {
 	document.getElementsByClassName("slider")[1].style.height = h1;
 
 
+	$('#loading').css("display", "none");
+	
+	
 }
 
 function activate(element) {

@@ -8,8 +8,8 @@ var nowActive = 1;
 
 
 window.onload = function() {
-	
-	
+
+
 	$('#_home').css("color", "black");
 	activate($("#_home"));
 
@@ -32,8 +32,8 @@ window.onload = function() {
 
 
 	$('#loading').css("display", "none");
-	
-	
+
+
 }
 
 function activate(element) {
@@ -161,13 +161,13 @@ let emojiSwitch = $("#emojiSwitch"),
 	emojiBoard = $("#emojiBoard"),
 	emojiActive = false
 
-$('body').click((event)=>{
-	if(!(($.contains(emojiBoard[0],event.target)) || ($.contains(emojiSwitch[0],event.target)))){
+$('body').click((event) => {
+	if (!(($.contains(emojiBoard[0], event.target)) || ($.contains(emojiSwitch[0], event.target)))) {
 		emojiBoard.hide()
-		if(emojiActive){
+		if (emojiActive) {
 			emojiActive = !emojiActive
 			console.log(emojiActive)
-		emojiSwitch.toggleClass("icon-emoji-off icon-emoji-on")
+			emojiSwitch.toggleClass("icon-emoji-off icon-emoji-on")
 		}
 	}
 })
@@ -175,25 +175,26 @@ $('body').click((event)=>{
 emojiBoard.hide()
 
 emojiSwitch.hover(
-()=>{
-	emojiSwitch.css("color","rgb(255,200,61)")
-}
+	() => {
+		emojiSwitch.css("color", "rgb(255,200,61)")
+	}
 )
 
 emojiSwitch.click(
-	()=>{
+	() => {
 		event.stopPropagation()
 		emojiActive = !emojiActive
 		console.log(emojiActive)
 		emojiSwitch.toggleClass("icon-emoji-off icon-emoji-on")
-		setTimeout(()=>{emojiBoard.toggle()},100)
+		setTimeout(() => {
+			emojiBoard.toggle()
+		}, 100)
 	}
 
 )
 
 emojiBoard.hover(
-()=>{
+	() => {
 		emojiBoard.show()
 	}
 )
-

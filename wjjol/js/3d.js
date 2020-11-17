@@ -96,7 +96,7 @@ function display1() {
 				console.error('An error happened' + err);
 			}
 		);
-		
+
 		animate1();
 	}
 
@@ -171,31 +171,31 @@ function display2() {
 				console.error('An error happened' + err);
 			}
 		);
-		
+
 		var renderPass = new THREE.RenderPass(scene, camera);
-		
+
 		const params = {
 			//exposure: 0.2,
 			bloomStrength: 0.7,
 			bloomThreshold: 0.2,
 			bloomRadius: 0.2
 		};
-		
+
 		//strength radius threshold
 		const bloomPass = new THREE.UnrealBloomPass(new THREE.Vector2(canvasSizeX, canvasSizeY), 1.5, 0.4, 0.85);
 		bloomPass.threshold = params.bloomThreshold;
 		bloomPass.strength = params.bloomStrength;
 		bloomPass.radius = params.bloomRadius;
-		
+
 		const afterimagePass = new THREE.AfterimagePass(0.9);
-		
+
 		composer = new THREE.EffectComposer(renderer);
 		composer.addPass(renderPass);
 		composer.addPass(bloomPass);
 		composer.addPass(afterimagePass);
-		
-		
-		
+
+
+
 
 		animate2();
 

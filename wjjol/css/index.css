@@ -134,6 +134,21 @@ body {
 	z-index: 0;
 }
 
+.potfo{
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	position: absolute;
+	z-index: 5;
+	
+}
+.potfo-img{
+	width: 70%;
+	height: 100%;
+	margin-right: 2rem;
+	
+}
+
 
 
 .img-cur {

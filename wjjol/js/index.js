@@ -198,3 +198,94 @@ emojiBoard.hover(
 		emojiBoard.show()
 	}
 )
+
+//github
+let gitFlexBox = $('.git-content')[0]
+
+
+/* document.addEventListener('DOMMouseScroll',handler,false)
+    document.addEventListener('mousewheel',handler,false) */
+	document.addEventListener('DOMMouseScroll',throttle(realFunc,0,100),false)
+	    document.addEventListener('mousewheel',throttle(realFunc,0,100),false)
+	
+	
+	function handler(event){
+			var detail = event.wheelDelta || event.detail;
+			var moveForwardStep = 1;
+			var moveBackStep = -1;
+			var step = 0;	
+			if(detail > 0){
+					step = moveForwardStep*600;
+			}else{
+				step = moveBackStep *600;
+				
+				
+			}
+				console.log(1)
+			
+			/* let result = gitFlexBox.scrollLeft-step;
+				
+			
+			function a(){
+				if(step * (gitFlexBox.scrollLeft - result) > 0){
+					console.log("aaaa")
+					gitFlexBox.scrollLeft -= step/20;
+					window.requestAnimationFrame(a)
+				}
+			}
+			
+			window.requestAnimationFrame(a) */
+			
+			
+			/* let str = gitFlexBox.scrollLeft - step
+			
+			gitFlexBox.scrollTo({
+  left: str,
+  behavior: 'smooth'
+});
+ */
+
+
+	
+		} 
+		
+		
+		function throttle(func, wait, mustRun) {
+		    var timeout,
+		        startTime = new Date();
+		 
+		    return function() {
+		        var context = this,
+		            args = arguments,
+		            curTime = new Date();
+		 
+		        clearTimeout(timeout);
+		        // 如果达到了规定的触发时间间隔，触发 handler
+		        if(curTime - startTime >= mustRun){
+		            func.apply(context,args);
+		            startTime = curTime;
+		        // 没达到触发间隔，重新设定定时器
+		        }else{
+		            //timeout = setTimeout(func, wait);
+		        }
+		    };
+		};
+		// 实际想绑定在 scroll 事件上的 handler
+		function realFunc(){
+			var detail = event.wheelDelta || event.detail;
+			var moveForwardStep = 1;
+			var moveBackStep = -1;
+			var step = 0;	
+			if(detail > 0){
+					step = moveForwardStep*600;
+			}else{
+				step = moveBackStep *600;
+			}
+			let str = gitFlexBox.scrollLeft - step
+		    gitFlexBox.scrollTo({
+		      left: str,
+		      behavior: 'smooth'
+		    });
+		}
+		// 采用了节流函数
+		//window.addEventListener('scroll',throttle(realFunc,500,1000));

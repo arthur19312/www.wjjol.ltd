@@ -485,6 +485,7 @@ body {
 	border: 2px #e2e2e2 solid;
 	resize: vertical;
 	outline: none;
+	line-height: 1.8rem;
 }
 .contact-input:hover{
 	border-color: #ccc;
@@ -564,7 +565,7 @@ body {
 }
 
 #emojiSwitch{
-	padding: 1.5rem;color: rgb(200,200,200);cursor: pointer;
+	padding: 1rem;color: rgb(200,200,200);cursor: pointer;
 }
 
 

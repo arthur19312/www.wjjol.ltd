@@ -205,8 +205,8 @@ let gitFlexBox = $('.git-content')[0]
 
 /* document.addEventListener('DOMMouseScroll',handler,false)
     document.addEventListener('mousewheel',handler,false) */
-	document.addEventListener('DOMMouseScroll',throttle(realFunc,0,400),false)
-	    document.addEventListener('mousewheel',throttle(realFunc,0,400),false)
+	document.addEventListener('DOMMouseScroll',throttle(realFunc,0,200),false)
+	    document.addEventListener('mousewheel',throttle(realFunc,0,200),false)
 	
 	
 	function handler(event){

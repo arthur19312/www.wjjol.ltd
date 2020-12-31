@@ -9,8 +9,8 @@ if (window.innerWidth > 2000) {
 	canvasSizeX = 1200;
 	canvasSizeY = 960;
 } else if (window.innerWidth > 1350) {
-	canvasSizeX = 800;
-	canvasSizeY = 640;
+	canvasSizeX = 900;
+	canvasSizeY = 720;
 } else if (window.innerWidth > 1200) {
 	canvasSizeX = 600;
 	canvasSizeY = 480;

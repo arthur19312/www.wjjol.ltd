@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5105122",
+      "name": "云化",
+      "font_class": "yun",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1318519",
+      "name": "宇宙星球-13",
+      "font_class": "yuzhou",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "7991500",
+      "name": "烟花 (1)",
+      "font_class": "yanhua",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "2533104",
+      "name": "六芒星",
+      "font_class": "liumangxin",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
       "icon_id": "1071024",
       "name": "表情1",
       "font_class": "emoji-off",

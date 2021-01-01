@@ -322,3 +322,14 @@ let gitSub = [0,$('#gitSub1'), $('#gitSub2'), $('#gitSub3'), $('#gitSub4')]
 				
 			}
 		});
+		
+		
+		let leftSub = $('#leftSub'),rightSub = $('#rightSub')
+		function displaySub(){
+			leftSub.css("opacity",0.9)
+			rightSub.css("opacity",0.9)
+		}
+		function hiddenSub(){
+			leftSub.css("opacity",0)
+			rightSub.css("opacity",0)
+		}

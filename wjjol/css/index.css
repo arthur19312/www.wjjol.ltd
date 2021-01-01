@@ -29,6 +29,9 @@ body {
 .trans{
 	transition: all 0.3s ease;
 }
+.trans-long{
+	transition: all 1s ease;
+}
 
 
 .title {

@@ -22,6 +22,14 @@ body {
 	top: 0.35rem;
 }
 
+.cursor{
+	cursor: pointer;
+}
+
+.trans{
+	transition: all 0.3s ease;
+}
+
 
 .title {
 	position: fixed;
@@ -331,9 +339,18 @@ body {
 
 
 .git-item {
-	margin-left: 12rem;
+	margin-left: 10rem;
 	font-size: 0;
 }
+
+
+
+.sub-active{
+	font-size: 2.6rem;
+	color: rgb(105,186,215);
+	text-shadow: 3px 3px rgba(135,216,245,0.6);
+}
+
 
 .short-line {
 	background-color: #555;

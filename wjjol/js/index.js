@@ -201,7 +201,8 @@ emojiBoard.hover(
 
 //github
 let gitFlexBox = $('.git-content')[0]
-
+let gitNowActive = 1
+let gitSub = [0,$('#gitSub1'), $('#gitSub2'), $('#gitSub3'), $('#gitSub4')]
 
 /* document.addEventListener('DOMMouseScroll',handler,false)
     document.addEventListener('mousewheel',handler,false) */
@@ -218,35 +219,7 @@ let gitFlexBox = $('.git-content')[0]
 					step = moveForwardStep*600;
 			}else{
 				step = moveBackStep *600;
-				
-				
 			}
-				console.log(1)
-			
-			/* let result = gitFlexBox.scrollLeft-step;
-				
-			
-			function a(){
-				if(step * (gitFlexBox.scrollLeft - result) > 0){
-					console.log("aaaa")
-					gitFlexBox.scrollLeft -= step/20;
-					window.requestAnimationFrame(a)
-				}
-			}
-			
-			window.requestAnimationFrame(a) */
-			
-			
-			/* let str = gitFlexBox.scrollLeft - step
-			
-			gitFlexBox.scrollTo({
-  left: str,
-  behavior: 'smooth'
-});
- */
-
-
-	
 		} 
 		
 		
@@ -277,15 +250,75 @@ let gitFlexBox = $('.git-content')[0]
 			var moveBackStep = -1;
 			var step = 0;	
 			if(detail > 0){
-					step = moveForwardStep*600;
+					step = moveForwardStep*400;
 			}else{
-				step = moveBackStep *600;
+				step = moveBackStep *400;
 			}
 			let str = gitFlexBox.scrollLeft - step
 		    gitFlexBox.scrollTo({
 		      left: str,
 		      behavior: 'smooth'
 		    });
+			
+			if((str > 0 ) && (str <= 1000)){
+				gitNowActive = 1
+				
+			}else if((str > 1000 ) && (str <= 1700)){
+				gitNowActive = 2
+				
+			}else if((str > 1700 ) && (str <= 2700)){
+				gitNowActive = 3
+				
+			}else if(str > 2700){
+				gitNowActive = 4
+				
+			}else{
+				console.log(gitNowActive+'gna')
+			}
+			
+			gitSub[gitNowActive].siblings('.sub-active').removeClass('sub-active')
+			gitSub[gitNowActive].addClass('sub-active');
+			
 		}
 		// 采用了节流函数
 		//window.addEventListener('scroll',throttle(realFunc,500,1000));
+		
+		
+		
+		function scrollGit(n){
+			gitFlexBox.scrollTo({
+			  left: n===1?0:n===2?1350:n===3?2400:n===4?3600:0,
+			  behavior: 'smooth'
+			});
+			
+			gitNowActive = n;
+			gitSub[n].siblings('.sub-active').removeClass('sub-active')
+			gitSub[n].addClass('sub-active');
+		}
+		
+		
+		
+		let gitContent = $('#github')
+		
+		$(document).keydown((event)=>{
+			let kc = event.keyCode
+			if(gitContent.hasClass('content-item-active')){
+				if((kc === 37) || (kc === 65)){
+					if(gitNowActive != 1){
+						gitNowActive--;
+						scrollGit(gitNowActive)
+						gitSub[gitNowActive].siblings('.sub-active').removeClass('sub-active')
+						gitSub[gitNowActive].addClass('sub-active');
+					}
+				}else if((kc === 39)||(kc === 68)){
+					if(gitNowActive != 4){
+						gitNowActive++;
+						scrollGit(gitNowActive)
+						gitSub[gitNowActive].siblings('.sub-active').removeClass('sub-active')
+						gitSub[gitNowActive].addClass('sub-active');
+					}
+				}else{}
+				
+				
+			}
+		});

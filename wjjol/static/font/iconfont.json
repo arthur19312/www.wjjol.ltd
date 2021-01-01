@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "19174957",
+      "name": "zuo",
+      "font_class": "you",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "19174954",
+      "name": "zuo",
+      "font_class": "zuo",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "2190726",
+      "name": "D",
+      "font_class": "D",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "2190734",
+      "name": "A",
+      "font_class": "A",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
       "icon_id": "5105122",
       "name": "云化",
       "font_class": "yun",

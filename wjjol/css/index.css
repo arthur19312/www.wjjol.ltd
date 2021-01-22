@@ -152,12 +152,7 @@ body {
 }
 
 .potfo {
-	display: flex;
-	flex-direction: row;
-	overflow-x: auto;
-	position: absolute;
-	z-index: 5;
-	width: 100%;
+	overflow: hidden;
 }
 
 .potfo-img {

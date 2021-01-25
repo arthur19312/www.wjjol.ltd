@@ -368,7 +368,7 @@ function changeColor(val){
 	console.log(val)
 	if(val.indexOf('#') >= 0){
 		//hex
-		HEX=val
+		HEX=val.toUpperCase()
 		let R = ('0x'+val[1]+val[2]-0).toString(10)
 		//console.log(R)
 		let G = ('0x'+val[3]+val[4]-0).toString(10)

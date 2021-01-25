@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17078294",
+      "name": "复制",
+      "font_class": "copy2",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "15828926",
+      "name": "笑脸",
+      "font_class": "smile",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "2776662",
+      "name": "插件",
+      "font_class": "plugin",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "6837930",
+      "name": "插件",
+      "font_class": "plugin2",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "8846338",
+      "name": "复制",
+      "font_class": "copy",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "1000958",
+      "name": "插件-错误提示",
+      "font_class": "error",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "19174957",
       "name": "zuo",
       "font_class": "you",

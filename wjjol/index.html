@@ -45,11 +45,21 @@
 				</a>
 			</div>
 			<div class="title-item">
+				<a id="_plugin" onclick="pluginFold(this)">
+					<span class="iconfont icon-plugin"></span>
+					<span class="title-content">PLUGIN</span>
+				</a>
+			</div>
+			<div class="title-item" id="plugin_1">
+				<a id="_kaomoji" onclick="activate(this)">
+					<span class="iconfont icon-smile"></span>
+					<span class="title-content">KAOMOJI</span>
+				</a>
+			</div>
+			<div class="title-item" id="plugin_2">
 				<a id="_tool" onclick="activate(this)">
 					<span class="iconfont icon-tool"></span>
-
 					<span class="title-content">TOOL</span>
-
 				</a>
 			</div>
 			
@@ -309,7 +319,7 @@
 					</div>
 
 				</div>
-				<div id="tool" class="content-item" style="margin-top: -1.6rem;">
+				<div id="kaomoji" class="content-item" style="margin-top: -1.6rem;">
 					<div class="kao-line">
 						<div onclick="copyContent(this);" class="kaomoji-item">(oﾟ▽ﾟ)o</div>
 						<div onclick="copyContent(this);" class="kaomoji-item">(ﾉﾟ▽ﾟ)ﾉ</div>
@@ -544,6 +554,32 @@
 					</div>
 
 
+				</div>
+				<div id="tool" class="content-item">
+					<h2>Color Picker</h2>
+					<h3>HEX: 
+					<span id="colorInfoHEX">#000000</span>
+					<!-- <span class="iconfont icon-copy2 cursor copy-icon"></span> -->
+					</h3>
+					<h3 >RGB: 
+					<span id="colorInfoRGB" >0, 0, 0</span>
+					<!-- <span class="iconfont icon-copy2 cursor copy-icon"></span> -->
+					</h3>
+					<h3 >HSL:
+					<span id="colorInfoHSL" onclick="copyContent2(this);">0°, 0%, 0%</span>
+					<!-- <span class="iconfont icon-copy2 cursor copy-icon" onclick="copyContent(this);"></span> -->
+					</h3>
+					<input type="color" class="input-color" id="colorInput" onchange="changeColor(this)" autofocus/>
+					
+					<!-- <input id="copy_content" type="text" value="" style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;" />
+					
+					<div class="parent-tip">
+						<div class="tip-rest" id="copy_tip">
+							<span class="global-msg-tip">已复制</span>
+					
+						</div>
+					</div> -->
+					
 				</div>
 				<div id="contact" class="content-item">
 					<h2>

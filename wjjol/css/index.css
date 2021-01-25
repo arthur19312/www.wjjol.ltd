@@ -22,14 +22,16 @@ body {
 	top: 0.35rem;
 }
 
-.cursor{
+.cursor {
 	cursor: pointer;
 }
 
-.trans{
+
+.trans {
 	transition: all 0.3s ease;
 }
-.trans-long{
+
+.trans-long {
 	transition: all 1s ease;
 }
 
@@ -235,9 +237,7 @@ body {
 } */
 
 
-.potfolio{
-	
-}
+.potfolio {}
 
 .kao-line {
 	width: 10%;
@@ -348,12 +348,13 @@ body {
 
 
 
-.sub-active{
+.sub-active {
 	font-size: 2.6rem;
-	color: rgb(105,186,215);
-	text-shadow: 3px 3px rgba(135,216,245,0.6);
+	color: rgb(105, 186, 215);
+	text-shadow: 3px 3px rgba(135, 216, 245, 0.6);
 	/* animation: twinkle 4s ease infinite; */
 }
+
 /* 
 @keyframes twinkle {
 	0% {
@@ -648,4 +649,22 @@ body {
 	padding: 1rem;
 	color: rgb(200, 200, 200);
 	cursor: pointer;
+}
+
+.input-color {
+	width: 48px;
+	height: 30px;
+	background-color: #fff;
+	border: #888 1px solid;
+}
+
+.copy-icon {
+	padding: 0.5rem;
+	font-size: 1.8rem;
+	color: #000;
+}
+
+.icon-copy2:before {
+    position: relative;
+    bottom: 2px;
 }

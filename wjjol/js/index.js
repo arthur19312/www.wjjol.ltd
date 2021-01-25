@@ -5,8 +5,13 @@ const cov = $(".cover");
 var nowActive = 1;
 
 
+let plugins = [$("#plugin_1"),$('#plugin_2')]
 
 
+plugins.forEach((i)=>{
+		i.hide()
+	})
+	
 window.onload = function() {
 
 
@@ -32,6 +37,9 @@ window.onload = function() {
 
 
 	$('#loading').css("display", "none");
+	
+	
+	document.getElementById('colorInput').click()
 
 
 }
@@ -338,3 +346,85 @@ function hiddenSub() {
 	leftSub.css("opacity", 0)
 	rightSub.css("opacity", 0)
 }
+
+
+
+
+function pluginFold(e){
+	//activate(e)
+	plugins.forEach((i)=>{
+		i.toggle(160)
+	})
+}
+
+
+let colorInfoHEX = $("#colorInfoHEX"),colorInfoRGB = $("#colorInfoRGB"),colorInfoHSL = $("#colorInfoHSL")
+let copyIcon = $(".copy-icon")
+
+
+function changeColor(val){
+	val = val.value
+	let HEX,RGB,HSL;
+	console.log(val)
+	if(val.indexOf('#') >= 0){
+		//hex
+		HEX=val
+		let R = ('0x'+val[1]+val[2]-0).toString(10)
+		//console.log(R)
+		let G = ('0x'+val[3]+val[4]-0).toString(10)
+		//console.log(G)
+		let B = ('0x'+val[5]+val[6]-0).toString(10)
+		//console.log(B)
+		
+		RGB='('+[R,G,B].join(", ")+')'
+		
+		HSL=rgb2Hsl(R,G,B)
+		console.log(HSL)
+		HSL='('+[HSL.h,HSL.s,HSL.l].join(", ")+')'
+		
+	}
+	
+	copyIcon.css("color",val)
+	
+	colorInfoHEX.text(HEX)
+	colorInfoRGB.text(RGB)
+	colorInfoHSL.text(HSL)
+}
+
+ //将rgb转换为hsl对象
+      function rgb2Hsl(r, g, b) {
+        r /= 255;
+        g /= 255;
+        b /= 255;
+        var max = Math.max(r, g, b);
+        var min = Math.min(r, g, b);
+        var diff = max - min;
+        var twoValue = max + min;
+        var obj = {h:0, s:0, l:0};
+        if(max == min) {
+          obj.h = 0;
+        } else if(max == r && g >= b) {
+          obj.h = 60 * (g - b) / diff;
+        } else if(max == r && g < b) {
+          obj.h = 60 * (g - b) / diff + 360;
+        } else if(max == g) {
+          obj.h = 60 * (b - r) / diff + 120;
+        } else if(max == b) {
+          obj.h = 60 * (r - g) / diff + 240;
+        }
+        obj.l = twoValue / 2;
+        if(obj.l == 0 || max == min) {
+          obj.s = 0;
+        } else if(0 < obj.l && obj.l <= 0.5) {
+          obj.s = diff / twoValue;
+          //obj.s = diff / (2 * obj.l);
+        } else {
+          obj.s = diff / (2 - twoValue);
+          //obj.s = diff / (2 - 2 * obj.l);
+        }
+        obj.h = Math.round(obj.h)+'°';
+		obj.s = Math.round(obj.s * 100)+'%';
+		obj.l = Math.round(obj.l * 100)+'%';
+        return obj;
+      }
+ 

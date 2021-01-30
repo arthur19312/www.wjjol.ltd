@@ -559,30 +559,31 @@
 					<h2>Color Picker</h2>
 					<h3>HEX: 
 					<span id="colorInfoHEX">#000000</span>
-					<!-- <span class="iconfont icon-copy2 cursor copy-icon"></span> -->
+					<span class="iconfont icon-copy2 cursor copy-icon" onclick="copyContent1(this,'colorInfoHEX');"></span>
 					</h3>
 					<h3 >RGB: 
 					<span id="colorInfoRGB" >0, 0, 0</span>
-					<!-- <span class="iconfont icon-copy2 cursor copy-icon"></span> -->
+					<span class="iconfont icon-copy2 cursor copy-icon"  onclick="copyContent1(this,'colorInfoRGB');"></span>
 					</h3>
 					<h3 >HSL:
-					<span id="colorInfoHSL" onclick="copyContent2(this);">0°, 0%, 0%</span>
-					<!-- <span class="iconfont icon-copy2 cursor copy-icon" onclick="copyContent(this);"></span> -->
+					<span id="colorInfoHSL">0°, 0%, 0%</span>
+					<span class="iconfont icon-copy2 cursor copy-icon" onclick="copyContent1(this,'colorInfoHSL');"></span>
 					</h3>
 					<input type="color" class="input-color" id="colorInput" oninput="changeColor(this)" autofocus/>
 					
-					<!-- <input id="copy_content" type="text" value="" style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;" />
+					<input id="copy_content_1" type="text" value="" style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;" />
 					
-					<div class="parent-tip">
-						<div class="tip-rest" id="copy_tip">
-							<span class="global-msg-tip">已复制</span>
 					
-						</div>
-					</div> -->
+						<span class="tip-rest" id="copy_tip_1">
+							<span class="global-msg-tip-1">已复制</span>
+					
+						</span>
+					
+					
 					
 				</div>
 				<div id="contact" class="content-item">
-					<h2>
+					<h2 style="margin-block-start: 0.2em;">
 						联系我 Contact Me
 						</h6>
 						<p>邮箱：blodcell@163.com
@@ -591,7 +592,8 @@
 
 							</a>
 						</p>
-						<p>也可以写在下面喔 (ﾟωﾟ)ﾉ☆<span class="iconfont icon-emoji-off" id="emojiSwitch"></span></p>
+						<p>也可以写在下面喔 (ﾟωﾟ)ﾉ☆
+						<!-- <span class="iconfont icon-emoji-off" id="emojiSwitch"></span> --></p>
 
 						<div>
 							<p class="contact-text">标题 Title：</p>
@@ -600,7 +602,7 @@
 						</div>
 						<div>
 							<p class="contact-text">内容 Content：</p>
-							<div><textarea rows="10" style="width: 24rem;min-height: 6rem;" class="contact-input" id="contact-content"></textarea>
+							<div><textarea rows="9" style="width: 24rem;min-height: 6rem;" class="contact-input" id="contact-content"></textarea>
 							</div>
 						</div>
 

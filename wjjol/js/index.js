@@ -15,7 +15,7 @@ plugins.forEach((i)=>{
 window.onload = function() {
 
 
-	$('#_home').css("color", "black");
+	$('#_home').css("color", "skyblue");
 	activate($("#_home"));
 
 	var s = nowActive + "_pic";
@@ -49,7 +49,7 @@ function activate(element) {
 	$(element).parent().siblings().each(function() {
 		$(this).children().css("color", "#aaa");
 	});
-	$(element).css("color", "black");
+	$(element).css("color", "skyblue");
 
 	var s = $(element).attr("id").slice(1);
 	var x = $("#" + s);
@@ -116,8 +116,43 @@ function copyContent(ElementObj) {
 
 }
 
+let copy_tip_1 = $('#copy_tip_1')
+
+function copyContent1(targetEle,ElementObj) {
+	//获取点击的值
+	var clickContent = document.getElementById(ElementObj).innerText;
+
+	//获取要赋值的input的元素
+	var inputElement = document.getElementById("copy_content_1");
+	//给input框赋值
+	inputElement.value = clickContent;
+	//选中input框的内容
+	inputElement.select();
+	// 执行浏览器复制命令
+	document.execCommand("Copy");
+	
+	$(targetEle).after(copy_tip_1)
+	//提示已复制
+	showToast1()
+
+}
+
 function showToast() { //消息弹出框
 	var tip = document.getElementById('copy_tip')
+	setTimeout(function() {
+		tip.className = "tip-appear"
+	}, 50);
+
+	setTimeout(function() {
+		tip.className = "tip-disappear"
+	}, 300);
+	tip.className = "tip-rest"
+
+
+}
+
+function showToast1() { //消息弹出框
+	var tip = document.getElementById('copy_tip_1')
 	setTimeout(function() {
 		tip.className = "tip-appear"
 	}, 50);
@@ -369,12 +404,8 @@ function changeColor(val){
 	if(val.indexOf('#') >= 0){
 		//hex
 		HEX=val.toUpperCase()
-		let R = ('0x'+val[1]+val[2]-0).toString(10)
-		//console.log(R)
-		let G = ('0x'+val[3]+val[4]-0).toString(10)
-		//console.log(G)
-		let B = ('0x'+val[5]+val[6]-0).toString(10)
-		//console.log(B)
+		
+		let {R,G,B} = hex2rgb(val);
 		
 		RGB='('+[R,G,B].join(", ")+')'
 		
@@ -428,3 +459,14 @@ function changeColor(val){
         return obj;
       }
  
+ function hex2rgb(val){
+	 let obj={};
+	 obj.R = ('0x'+val[1]+val[2]-0).toString(10)
+	 //console.log(R)
+	 obj.G = ('0x'+val[3]+val[4]-0).toString(10)
+	 //console.log(G)
+	 obj.B = ('0x'+val[5]+val[6]-0).toString(10)
+	 //console.log(B)
+	 return obj;
+	 
+ }

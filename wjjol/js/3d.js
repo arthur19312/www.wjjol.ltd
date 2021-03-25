@@ -97,6 +97,22 @@ function display1() {
 			}
 		);
 
+
+		var renderPass = new THREE.RenderPass(scene, camera);
+		composer = new THREE.EffectComposer(renderer);
+		composer.addPass(renderPass);
+
+		var dotScreenShader = new THREE.ShaderPass(THREE.DotScreenShader);
+		dotScreenShader.uniforms['scale'].value = 6;
+		composer.addPass(dotScreenShader);
+
+		var RGBShiftShader = new THREE.ShaderPass(THREE.RGBShiftShader);
+		//RGBShiftShader.uniforms['amount'].value = 0.0015;
+		composer.addPass(RGBShiftShader);
+		
+		var glitchPass = new THREE.GlitchPass();
+		composer.addPass( glitchPass );
+
 		animate1();
 	}
 
@@ -111,8 +127,8 @@ function animate1() {
 	camera.position.x = 200 * Math.sin(camera.rotation.y * 1);
 	camera.position.z = 200 * Math.cos(camera.rotation.y * 1);
 
-	renderer.render(scene, camera);
-	//composer.render()
+	//renderer.render(scene, camera);
+	composer.render()
 }
 
 

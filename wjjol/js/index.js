@@ -39,7 +39,7 @@ window.onload = function() {
 	$('#loading').css("display", "none");
 	
 	
-	document.getElementById('colorInput').click()
+	/* document.getElementById('colorInput').click() */
 
 
 }
@@ -199,7 +199,7 @@ function copyContentParent(ev) {
 		$("#contact-content").val(tmp + txt)
 	}
 }
-
+/* 
 let emojiSwitch = $("#emojiSwitch"),
 	emojiBoard = $("#emojiBoard"),
 	emojiActive = false
@@ -240,7 +240,7 @@ emojiBoard.hover(
 	() => {
 		emojiBoard.show()
 	}
-)
+) */
 
 //github
 let gitFlexBox = $('.git-content')[0]
@@ -400,7 +400,6 @@ let copyIcon = $(".copy-icon")
 function changeColor(val){
 	val = val.value
 	let HEX,RGB,HSL;
-	console.log(val)
 	if(val.indexOf('#') >= 0){
 		//hex
 		HEX=val.toUpperCase()
@@ -410,7 +409,6 @@ function changeColor(val){
 		RGB='('+[R,G,B].join(", ")+')'
 		
 		HSL=rgb2Hsl(R,G,B)
-		console.log(HSL)
 		HSL='('+[HSL.h,HSL.s,HSL.l].join(", ")+')'
 		
 	}

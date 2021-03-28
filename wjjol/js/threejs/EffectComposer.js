@@ -78,6 +78,17 @@ Object.assign( THREE.EffectComposer.prototype, {
 		pass.setSize( this._width * this._pixelRatio, this._height * this._pixelRatio );
 
 	},
+	removePass: function ( pass ) {
+	
+			const index = this.passes.indexOf( pass );
+	
+			if ( index !== - 1 ) {
+	
+				this.passes.splice( index, 1 );
+	
+			}
+	
+	},
 
 	insertPass: function ( pass, index ) {
 

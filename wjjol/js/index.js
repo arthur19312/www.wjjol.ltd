@@ -16,7 +16,7 @@ window.onload = function() {
 
 
 	$('#_home').css("color", "skyblue");
-	activate($("#_home"));
+	activate($("#_home")[0]);
 
 	var s = nowActive + "_pic";
 	document.getElementById(s).className = "img-cur";
@@ -57,6 +57,12 @@ function activate(element) {
 	x.siblings(".content-item-active").removeClass("content-item-active").addClass("content-item");
 
 	x.removeClass("content-item").addClass("content-item-active");
+	
+	console.log(element)
+	if(element.id.indexOf('github')>-1){
+		
+		startGlitch();
+	}
 }
 
 function activateMobile(element) {

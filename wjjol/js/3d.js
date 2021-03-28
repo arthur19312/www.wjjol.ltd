@@ -57,11 +57,15 @@ a.appendChild(renderer.domElement)
 
 container.appendChild(a);
 
-var scene, model, camera;
+var scene, model, camera, composer;
 var loader = new THREE.ObjectLoader();
 var aniId;
 var light1, light2, light3;
 var deg = Math.PI / 2;
+
+var glitchPass = new THREE.GlitchPass();
+
+
 display1();
 
 function display1() {
@@ -101,25 +105,21 @@ function display1() {
 		var renderPass = new THREE.RenderPass(scene, camera);
 		composer = new THREE.EffectComposer(renderer);
 		composer.addPass(renderPass);
-
-		var dotScreenShader = new THREE.ShaderPass(THREE.DotScreenShader);
-		dotScreenShader.uniforms['scale'].value = 6;
-		composer.addPass(dotScreenShader);
-
-		var RGBShiftShader = new THREE.ShaderPass(THREE.RGBShiftShader);
-		//RGBShiftShader.uniforms['amount'].value = 0.0015;
-		composer.addPass(RGBShiftShader);
-		
-		var glitchPass = new THREE.GlitchPass();
-		composer.addPass( glitchPass );
-
+			
+		composer.addPass( glitchPass);
+		count=0;
 		animate1();
 	}
 
 }
 
+var count=0;
+function startGlitch(){
+	count=0;
+}
 
 function animate1() {
+	
 	aniId = requestAnimationFrame(animate1);
 
 	camera.rotation.y += 0.007;
@@ -128,11 +128,20 @@ function animate1() {
 	camera.position.z = 200 * Math.cos(camera.rotation.y * 1);
 
 	//renderer.render(scene, camera);
+	
+	count=(++count)%2000;
+	if(count == 300){
+		composer.removePass( glitchPass );
+	}
+	if(count == 100){
+		if(composer.passes.indexOf(glitchPass)<0){
+			composer.addPass( glitchPass );
+		}
+	}
+	
+	
 	composer.render()
 }
-
-
-
 
 
 

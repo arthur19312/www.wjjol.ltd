@@ -4,14 +4,6 @@ const cov = $(".cover");
 
 var nowActive = 1;
 
-
-let plugins = [$("#plugin_1"),$('#plugin_2')]
-
-
-plugins.forEach((i)=>{
-		i.hide()
-	})
-	
 window.onload = function() {
 
 
@@ -30,7 +22,7 @@ window.onload = function() {
 	}
 
 	var h1 = document.getElementById("1_pic").clientHeight + "px";
-	console.log(h1);
+	/* console.log(h1); */
 
 	document.getElementsByClassName("slider")[0].style.height = h1;
 	document.getElementsByClassName("slider")[1].style.height = h1;
@@ -57,8 +49,8 @@ function activate(element) {
 	x.siblings(".content-item-active").removeClass("content-item-active").addClass("content-item");
 
 	x.removeClass("content-item").addClass("content-item-active");
-	
-	console.log(element)
+	/* 
+	console.log(element) */
 	if(element.id.indexOf('github')>-1){
 		
 		startGlitch();
@@ -386,16 +378,6 @@ function displaySub() {
 function hiddenSub() {
 	leftSub.css("opacity", 0)
 	rightSub.css("opacity", 0)
-}
-
-
-
-
-function pluginFold(e){
-	//activate(e)
-	plugins.forEach((i)=>{
-		i.toggle(160)
-	})
 }
 
 

@@ -437,7 +437,7 @@ body {
 	.heart {
 		width: 100px;
 		height: 100px;
-		background-color: #eb628b;
+		background-color: lightskyblue;
 		top: 40%;
 		left: 50%;
 		transform: translateX(-50%) rotate(45deg);
@@ -452,7 +452,7 @@ body {
 		content: '';
 		width: 100px;
 		height: 100px;
-		background-color: #eb628b;
+		background-color: lightskyblue;
 		border-radius: 50%;
 		position: absolute;
 		top: -50px;
@@ -465,7 +465,7 @@ body {
 		content: '';
 		width: 100px;
 		height: 100px;
-		background-color: #eb628b;
+		background-color: lightskyblue;
 		border-radius: 50%;
 		position: absolute;
 		top: 0;
@@ -485,7 +485,7 @@ body {
 		}
 
 		60% {
-			background-color: #eb628b;
+			background-color: lightskyblue;
 		}
 
 		90% {
@@ -509,7 +509,7 @@ body {
 		}
 
 		60% {
-			background-color: #eb628b;
+			background-color: lightskyblue;
 		}
 
 		90% {
@@ -535,7 +535,7 @@ body {
 		}
 
 		60% {
-			background-color: #eb628b;
+			background-color: lightskyblue;
 		}
 
 		90% {
